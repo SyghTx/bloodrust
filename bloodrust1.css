@@ -349,7 +349,7 @@ select.form-control:not([size]):not([multiple]) {
 .product__price {
     color: #a6b1e7;
     text-align: end;
-    background: #ffffff;
+    background: unset;
     bottom: 8px;
     right: 10px;
     border-radius: 10px;
