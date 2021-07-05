@@ -52,7 +52,7 @@ curcontent["skins"] = {
 <input class="spoil-button" type="checkbox" tabindex="-1">\
      <div class="spoil-box">\
          <span class="spoil-close fa"></span><span class="spoil-open fa"></span><span class="spoil-head">Какие есть ограничения при пополнении напрямую?</span>\
-         <blockquote class="spoil-Untext">\Совокупная стоимость скинов при пополнении должна быть более 100 рублей и они не должны иметь ограничения на продажу или передачу, а так-же сам игрок не должен иметь ограничений по времени на передачу предметов. Обмены с задержкой 15 дней, скинами дешевле 100р или не из <b>RUST</b> или <b>CSGO</b> - будут отклоняться.<br><br>Скины принимаются с 11:00 по 23:59 (мск).</li></ol>\
+         <blockquote class="spoil-Untext">\» У вас <b>не должно</b> быть задержки <b>15 дней</b> на обмены<br>» Принимаются скины только из <b>RUST</b> и <b>CS:GO</b><br>» Совокупная стоимость скинов должна быть <b>более 100 рублей</b><br>» Обмены принимаются с 11:00 по 23:59 (мск)</li></ol>\
          </blockquote>\
      </div></div>\
 <div class="x-spoiler">\
