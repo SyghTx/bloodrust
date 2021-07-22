@@ -533,7 +533,7 @@ curcontent["kit-free"] = {
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/furnace.png">\
 <div class="kit-item__quantity">25%</div></div></div>\
 </div></div>\
-<div class="serverheader">Кит за "#bloodrust" в нике - <span>Откат 72ч</span></div>\
+<div class="serverheader">Кит за "#bloodrust" в нике - <span>Откат 48ч</span></div>\
 <div class="kit_set"><div class="kit-items">\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/deer.skull.mask.png">\
 <div class="kit-item__quantity">x1</div></div></div>\
