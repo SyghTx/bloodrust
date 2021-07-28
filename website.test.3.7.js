@@ -51,7 +51,7 @@ curcontent["skins"] = {
 <div class="x-spoiler">\
 <input class="spoil-button" type="checkbox" tabindex="-1">\
      <div class="spoil-box">\
-         <span class="spoil-close fa"></span><span class="spoil-open fa"></span><span class="spoil-head">Какие есть ограничения при пополнении напрямую?</span>\
+         <span class="spoil-close fa"></span><span class="spoil-open fa"></span><span class="spoil-head">Ограничения при пополнении напрямую</span>\
          <blockquote class="spoil-Untext">\» У вас <b>не должно</b> быть задержки <b>15 дней</b> на обмены<br>» Принимаются скины только из <b>RUST</b> и <b>CS:GO</b><br>» Совокупная стоимость скинов должна быть <b>более 100 рублей</b><br>» Обмены принимаются с 11:00 по 23:59 (мск)</li></ol>\
          </blockquote>\
      </div></div>\
