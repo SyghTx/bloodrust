@@ -24,8 +24,8 @@ curcontent["rules"] = {
 <p class="MsoNormal"><span>Игровой Чат</span></li></p>\
 <p><li>Запрещены ссылки в чате на сторонние сервисы и сайты.</li></p>\
 <p><li>Запрещено продавать или делать вид что вы продаёте читы/макросы.</li></p>\
-<p><li>Запрещено продавать игровые ценности за реальную валюту.</li></p>\
 <p><li>Запрещено байтить игроков на вылет или выход с сервера.</li></p>\
+<p><li>Запрещено продавать игровые ценности за реальную валюту.</li></p>\
 <p><li>Запрещен флуд (многократное повторение бессмысленных фраз, символов) или многократное отправление одинаковых фраз за короткий промежуток времени.</li></p>\
 <p><li>Запрещены провокационные сообщения, по типу - "я читер, проверь меня".</li></p>\<br>\
 <p class="MsoNormal"><span>Проверки</span></li></p>\
@@ -87,19 +87,17 @@ curcontent["kit-kaban"] = {
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/charcoal.png">\
 <div class="kit-item__quantity">x1000</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/lowgradefuel.png">\
-<div class="kit-item__quantity">x600</div></div></div>\
+<div class="kit-item__quantity">x400</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/cloth.png">\
-<div class="kit-item__quantity">x600</div></div></div>\
+<div class="kit-item__quantity">x400</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/leather.png">\
-<div class="kit-item__quantity">x600</div></div></div>\
+<div class="kit-item__quantity">x400</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/metal.refined.png">\
 <div class="kit-item__quantity">x100</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/gears.png">\
-<div class="kit-item__quantity">x10</div></div></div>\
+<div class="kit-item__quantity">x5</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/sewingkit.png">\
-<div class="kit-item__quantity">x20</div></div></div>\
-<div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/metalblade.png">\
-<div class="kit-item__quantity">x20</div></div></div>\
+<div class="kit-item__quantity">x10</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/metalpipe.png">\
 <div class="kit-item__quantity">x10</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/metalspring.png">\
@@ -109,11 +107,11 @@ curcontent["kit-kaban"] = {
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/riflebody.png">\
 <div class="kit-item__quantity">x1</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/semibody.png">\
-<div class="kit-item__quantity">x6</div></div></div>\
+<div class="kit-item__quantity">x2</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/roadsigns.png">\
-<div class="kit-item__quantity">x20</div></div></div>\
+<div class="kit-item__quantity">x10</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/rope.png">\
-<div class="kit-item__quantity">x25</div></div></div>\
+<div class="kit-item__quantity">x10</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/tarp.png">\
 <div class="kit-item__quantity">x10</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/scrap.png">\
@@ -141,9 +139,9 @@ curcontent["kit-kaban"] = {
 <div class="kit-item__quantity">x1</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/syringe.medical.png">\
 <div class="kit-item__quantity">x4</div></div></div>\
-<div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/icepick.salvaged.png">\
+<div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/pickaxe.png">\
 <div class="kit-item__quantity">x1</div></div></div>\
-<div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/axe.salvaged.png">\
+<div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/hatchet.png">\
 <div class="kit-item__quantity">x1</div></div></div>\
 </div></div></div>\
 <div class="xbox_custom_kits" ><div class="serverheader">Кит "Дом" - <span>Откат 72ч</span></div>\
@@ -178,19 +176,17 @@ curcontent["kit-joker"] = {
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/charcoal.png">\
 <div class="kit-item__quantity">x2000</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/lowgradefuel.png">\
-<div class="kit-item__quantity">x800</div></div></div>\
+<div class="kit-item__quantity">x600</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/cloth.png">\
-<div class="kit-item__quantity">x800</div></div></div>\
+<div class="kit-item__quantity">x600</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/leather.png">\
-<div class="kit-item__quantity">x800</div></div></div>\
+<div class="kit-item__quantity">x600</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/metal.refined.png">\
-<div class="kit-item__quantity">x150</div></div></div>\
+<div class="kit-item__quantity">x200</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/gears.png">\
-<div class="kit-item__quantity">x15</div></div></div>\
+<div class="kit-item__quantity">x10</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/sewingkit.png">\
-<div class="kit-item__quantity">x25</div></div></div>\
-<div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/metalblade.png">\
-<div class="kit-item__quantity">x25</div></div></div>\
+<div class="kit-item__quantity">x15</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/metalpipe.png">\
 <div class="kit-item__quantity">x15</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/metalspring.png">\
@@ -200,11 +196,11 @@ curcontent["kit-joker"] = {
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/riflebody.png">\
 <div class="kit-item__quantity">x2</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/semibody.png">\
-<div class="kit-item__quantity">x8</div></div></div>\
+<div class="kit-item__quantity">x4</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/roadsigns.png">\
-<div class="kit-item__quantity">x25</div></div></div>\
+<div class="kit-item__quantity">x15</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/rope.png">\
-<div class="kit-item__quantity">x30</div></div></div>\
+<div class="kit-item__quantity">x15</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/tarp.png">\
 <div class="kit-item__quantity">x15</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/scrap.png">\
@@ -236,7 +232,7 @@ curcontent["kit-joker"] = {
 <div class="kit-item__quantity">x6</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/icepick.salvaged.png">\
 <div class="kit-item__quantity">x1</div></div></div>\
-<div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/chainsaw.png">\
+<div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/axe.salvaged.png">\
 <div class="kit-item__quantity">x1</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/explosive.satchel.png">\
 <div class="kit-item__quantity">x4</div></div></div>\
@@ -256,8 +252,8 @@ curcontent["kit-joker"] = {
 <div class="kit-item__quantity">x1</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://xackuscr.ru/rust/magictree.png">\
 <div class="kit-item__quantity">x1</div></div></div>\
-<div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://xackuscr.ru/rust/heart.png">\
-<div class="kit-item__quantity">x1</div></div></div>\
+<div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://xackuscr.ru/rust/crystall.png">\
+<div class="kit-item__quantity">x2</div></div></div>\
 </div></div></div>'
 };
 
@@ -285,33 +281,31 @@ curcontent["kit-masnik"] = {
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/charcoal.png">\
 <div class="kit-item__quantity">x3000</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/lowgradefuel.png">\
-<div class="kit-item__quantity">x1000</div></div></div>\
+<div class="kit-item__quantity">x800</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/cloth.png">\
-<div class="kit-item__quantity">x1000</div></div></div>\
+<div class="kit-item__quantity">x800</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/leather.png">\
-<div class="kit-item__quantity">x1000</div></div></div>\
+<div class="kit-item__quantity">x800</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/metal.refined.png">\
-<div class="kit-item__quantity">x200</div></div></div>\
+<div class="kit-item__quantity">x300</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/gears.png">\
 <div class="kit-item__quantity">x20</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/sewingkit.png">\
-<div class="kit-item__quantity">x30</div></div></div>\
-<div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/metalblade.png">\
-<div class="kit-item__quantity">x30</div></div></div>\
+<div class="kit-item__quantity">x20</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/metalpipe.png">\
 <div class="kit-item__quantity">x20</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/metalspring.png">\
 <div class="kit-item__quantity">x20</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/smgbody.png">\
-<div class="kit-item__quantity">x3</div></div></div>\
+<div class="kit-item__quantity">x4</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/riflebody.png">\
-<div class="kit-item__quantity">x3</div></div></div>\
+<div class="kit-item__quantity">x4</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/semibody.png">\
-<div class="kit-item__quantity">x10</div></div></div>\
+<div class="kit-item__quantity">x6</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/roadsigns.png">\
-<div class="kit-item__quantity">x30</div></div></div>\
+<div class="kit-item__quantity">x20</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/rope.png">\
-<div class="kit-item__quantity">x40</div></div></div>\
+<div class="kit-item__quantity">x20</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/tarp.png">\
 <div class="kit-item__quantity">x20</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/scrap.png">\
@@ -367,8 +361,8 @@ curcontent["kit-masnik"] = {
 <div class="kit-item__quantity">x1</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://xackuscr.ru/rust/magictree.png">\
 <div class="kit-item__quantity">x1</div></div></div>\
-<div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://xackuscr.ru/rust/heart.png">\
-<div class="kit-item__quantity">x1</div></div></div>\
+<div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://xackuscr.ru/rust/crystall.png">\
+<div class="kit-item__quantity">x2</div></div></div>\
 </div></div></div>'
 };
 
@@ -384,9 +378,9 @@ curcontent["kit-smert"] = {
 	<div class="xbox_custom_kits" ><div class="serverheader">Кит "Ресы" - <span>Откат 24ч</span></div>\
 <div class="kit_set"><div class="kit-items">\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/stones.png">\
-<div class="kit-item__quantity">x13000</div></div></div>\
+<div class="kit-item__quantity">x12000</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/wood.png">\
-<div class="kit-item__quantity">x13000</div></div></div>\
+<div class="kit-item__quantity">x12000</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/metal.fragments.png">\
 <div class="kit-item__quantity">x6000</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/gunpowder.png">\
@@ -396,35 +390,33 @@ curcontent["kit-smert"] = {
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/charcoal.png">\
 <div class="kit-item__quantity">x4000</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/lowgradefuel.png">\
-<div class="kit-item__quantity">x1300</div></div></div>\
+<div class="kit-item__quantity">x1000</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/cloth.png">\
-<div class="kit-item__quantity">x1300</div></div></div>\
+<div class="kit-item__quantity">x1000</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/leather.png">\
-<div class="kit-item__quantity">x1300</div></div></div>\
+<div class="kit-item__quantity">x1000</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/metal.refined.png">\
-<div class="kit-item__quantity">x300</div></div></div>\
+<div class="kit-item__quantity">x400</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/gears.png">\
-<div class="kit-item__quantity">x40</div></div></div>\
+<div class="kit-item__quantity">x25</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/sewingkit.png">\
-<div class="kit-item__quantity">x40</div></div></div>\
-<div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/metalblade.png">\
-<div class="kit-item__quantity">x40</div></div></div>\
+<div class="kit-item__quantity">x25</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/metalpipe.png">\
-<div class="kit-item__quantity">x20</div></div></div>\
+<div class="kit-item__quantity">x25</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/metalspring.png">\
-<div class="kit-item__quantity">x30</div></div></div>\
+<div class="kit-item__quantity">x25</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/smgbody.png">\
-<div class="kit-item__quantity">x5</div></div></div>\
+<div class="kit-item__quantity">x6</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/riflebody.png">\
-<div class="kit-item__quantity">x4</div></div></div>\
+<div class="kit-item__quantity">x6</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/semibody.png">\
-<div class="kit-item__quantity">x15</div></div></div>\
+<div class="kit-item__quantity">x8</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/roadsigns.png">\
-<div class="kit-item__quantity">x45</div></div></div>\
+<div class="kit-item__quantity">x25</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/rope.png">\
-<div class="kit-item__quantity">x55</div></div></div>\
+<div class="kit-item__quantity">x25</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/tarp.png">\
-<div class="kit-item__quantity">x30</div></div></div>\
+<div class="kit-item__quantity">x25</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/scrap.png">\
 <div class="kit-item__quantity">x400</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/supply.signal.png">\
@@ -480,8 +472,8 @@ curcontent["kit-smert"] = {
 <div class="kit-item__quantity">x1</div></div></div>\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://xackuscr.ru/rust/magictree.png">\
 <div class="kit-item__quantity">x1</div></div></div>\
-<div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://xackuscr.ru/rust/heart.png">\
-<div class="kit-item__quantity">x1</div></div></div>\
+<div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://xackuscr.ru/rust/crystall.png">\
+<div class="kit-item__quantity">x2</div></div></div>\
 </div></div></div>'
 };
 
