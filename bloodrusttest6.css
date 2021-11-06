@@ -241,6 +241,12 @@ button:focus {
 .dropdown-item:nth-child(4n) { 
   	animation: zoomIn 0.6s;
 }
+.dropdown-item:nth-child(5n) { 
+  	animation: zoomIn 0.8s;
+}
+.dropdown-item:nth-child(6n) { 
+  	animation: zoomIn 1s;
+}
 .dropdown-item:last-child {
   	border-radius: 0px 0px 15px 15px;
 }
@@ -526,6 +532,10 @@ select.form-control:not([size]):not([multiple]) {
     background: linear-gradient(to right, #a88beb 0%, #decef8 100%);
     animation: load 5s normal forwards;
 }
+.xserver:nth-child(5) .xserver__status .progress .bg-success {
+    background: linear-gradient(to right, #6db3f4 0%, #aed7f0 100%);
+    animation: load 6s normal forwards;
+}
 
 .xserver:nth-child(1) .fa-play:hover {
     color: #dc6048;
@@ -540,7 +550,7 @@ select.form-control:not([size]):not([multiple]) {
     color: #c8b3f3;
 }
 .xserver:nth-child(5) .fa-play:hover {
-    color: #70b446;
+    color: #a8d2f3;
 }
 
 .xserver:nth-child(1) .xserver__title:after {
@@ -583,30 +593,14 @@ select.form-control:not([size]):not([multiple]) {
     color: #777777;
 }
 
-.xserver:nth-child(5) .xserver__status .progress .bg-success {
-    background: linear-gradient(to right, #8d8d8d 0%, #a1a1a1 100%);
-    animation: load 6s normal forwards;
-}
-
-.xserver:nth-child(5) .xserver__status {
-    margin-bottom: 0px;
-    padding-right: 0px;
-    padding-left: 0px;
-}
-.xserver:nth-child(5) .xserver__links {
-    margin-top: -17px;
+.xserver:nth-child(5) .xserver__title:after {
+    content: "NoLimit Procedural" ;
     font-weight: 100;
-    font-size: 11px;
-	margin-right: 10px;
-    color: white;
-    text-align: center;
-    flex-direction: column;
-}
-.xserver:nth-child(5) .progress-bar {
-    height: 1rem;
-}
-.xserver:nth-child(5) .xserver__title {
-    display: none;
+    margin-left: 4px;
+    font-size: 13px;
+    opacity: 0.5;
+    transition: all 0.5s ease-out;
+    color: #777777;
 }
 
 /*nav-pills*/
@@ -1003,10 +997,6 @@ label {
 }
 .input-group-btn .form-control {
     text-align: center;
-}
-.modal-body .text-center:after {
-    content: ' Средства которые вернутся на баланс станут бонусными и перевести их другому пользователю не получится.';
-    font-weight: 100;
 }
 .text-center {
     text-align: center!important;
