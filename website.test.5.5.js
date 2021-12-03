@@ -687,10 +687,10 @@ window.onload = function () {
 		curcontent["block"].xcon += '<div class="block_by_category block_category_'+ (i + 1) +'">';
 		for (var b = 0; b < BlockListArrays[i].length; b++) {
 			if(b == 5 && i == 4)
-			curcontent["block"].xcon += '<div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://moscow-cdn.ru/rust/items/icons256/metal.facemask.png">\
+			curcontent["block"].xcon += '<div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://rustlabs.com/img/items180/metal.facemask.png">\
 										<div class="kit-item__quantity block-lvl-'+ (i + 1) +'"></div></div></div>';
 			else
-			curcontent["block"].xcon += '<div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/'+ BlockListArrays[i][b] +'.png">\
+			curcontent["block"].xcon += '<div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://rustlabs.com/img/items180/'+ BlockListArrays[i][b] +'.png">\
 										<div class="kit-item__quantity block-lvl-'+ (i + 1) +'"></div></div></div>';
 		}
 		curcontent["block"].xcon += '</div>';
