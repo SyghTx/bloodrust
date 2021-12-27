@@ -30,7 +30,7 @@ curcontent["rules"] = {
 <p><li>Запрещено продавать игровые ценности за реальную валюту (RMT).</li></p>\
 <p><li>Администрация оставляет за собой право выдать мут игроку в чате если тот ведёт себя неадекватно или флудит одинаковыми сообщениями.</li></p>\<br>\
 <p class="MsoNormal"><span>Проверки</span></li></p>\
-<p><li>Проверки проходят только через программы «DISCORD» и «SKYPE». Каждый игрок на нашем проекте, в обязательном порядке должен иметь одну из данных программ на своём пк (или хотя-бы аккаунт в дискорде).</li></p>\
+<p><li>Проверки проходят только через программу «DISCORD». Каждый игрок на нашем проекте, в обязательном порядке должен иметь эту программу на своём пк (или хотя-бы аккаунт, чтобы зайти в дискорд через браузер).</li></p>\
 <p><li>Вы имеете полное право отказаться проходить проверку, но в этом случае Вы и ваши тиммейты будут заблокированы.</li></p>\
 <p><li>Так-же отказом от проверки будет считаться выход с сервера или предоставление некорректных контактных данных.</li></p>\
 <p><li>Игнор вызова на проверку увенчается блокировкой, игнором так-же считается если игрок отправил свой дискорд, но заявку не принимает.</li></p>\
@@ -60,7 +60,7 @@ curcontent["skins"] = {
 <div class="x-spoiler">\
 <input class="spoil-button" type="checkbox" tabindex="-1">\
      <div class="spoil-box"><span class="spoil-close fa"></span><span class="spoil-open fa"></span><span class="spoil-head">Хочу пополнить баланс скинами</span><br>\
-	 <blockquote class="spoil-Untext">Чтобы пополнить баланс необходимо перейти перейти на страницу обмена (нажав на кнопку снизу), выбрать скины которыми хотите пополнить, нажать кнопку "Предложить обмен" и подтвердить обмен через мобильное приложение Steam.<div class="btn-skins"><a class="btn-skin" href="https://steamcommunity.com/tradeoffer/new/?partner=97747149&token=6cxG98Sh" target="_blank">Начать обмен</a></blockquote>\
+	 <blockquote class="spoil-Untext">Чтобы пополнить баланс необходимо перейти на страницу обмена (нажав на кнопку снизу), выбрать скины которыми хотите пополнить, нажать кнопку "Предложить обмен" и подтвердить обмен через мобильное приложение Steam.<div class="btn-skins"><a class="btn-skin" href="https://steamcommunity.com/tradeoffer/new/?partner=97747149&token=6cxG98Sh" target="_blank">Начать обмен</a></blockquote>\
      </div></div><div class="row-skins"><a class="container-user" href="https://vk.com/im?sel=-113458740" target="_blank"><img alt="" src="https://i.imgur.com/dVKXJeW.png" class="icon-user"><div class="textContainer-user"><span class="name-user">Группа ВК</span><span class="category-user">Для связи</span></div></a><a class="container-user1" href="https://discord.gg/bloodrust" target="_blank"><img alt="" src="https://i.imgur.com/PYUeZt9.png" class="icon-user1"><div class="textContainer-user1"><span class="name-user1">Дискорд сервер</span><span class="category-user1">Для связи</span></div></a>'
 };
 
