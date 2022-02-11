@@ -669,7 +669,7 @@ select.form-control:not([size]):not([multiple]) {
 }
 @media (max-width: 767px)
 {
-.server-navigation .nav-pills .nav-link:last-child {
+.server-navigation .nav-pills .nav-link:nth-child(3) {
   border-radius: 0px 0px 15px 15px;
 }
 }
