@@ -51,7 +51,7 @@ curcontent["skins"] = {
 <input class="spoil-button" type="checkbox" tabindex="-1">\
      <div class="spoil-box">\
          <span class="spoil-close fa"></span><span class="spoil-open fa"></span><span class="spoil-head">Ограничения при пополнении напрямую</span>\
-         <blockquote class="spoil-Untext">\» У вас <b>не должно</b> быть задержки <b>15 дней</b> на обмены<br>» Принимаются скины только из <b>RUST</b> и <b>CS:GO</b><br>» Если скинов в обмене слишком много - лучше отправлять частями</li></ol>\
+         <blockquote class="spoil-Untext">\» У вас <b>не должно</b> быть задержки <b>15 дней</b> на обмены<br>» Принимаются скины только из <b>RUST</b> и <b>CS:GO</b><br>» Если скинов в обмене много - лучше отправлять частями</li></ol>\
          </blockquote>\
      </div></div>\
 <div class="x-spoiler">\
@@ -244,7 +244,7 @@ curcontent["kit-joker"] = {
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/coffin.storage.png">\
 <div class="kit-item__quantity">x1</div></div></div>\
 </div></div></div>\
-<div class="xbox_custom_kits" ><div class="serverheader">Кит "Магический" - <span>Откат 24ч</span></div>\
+<div class="xbox_custom_kits" ><div class="serverheader">Кит "Магический" (один на все привилегии) - <span>Откат 24ч</span></div>\
 <div class="kit_set"><div class="kit-items">\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://xackuscr.ru/rust/goldskull.png">\
 <div class="kit-item__quantity">x1</div></div></div>\
@@ -353,7 +353,7 @@ curcontent["kit-masnik"] = {
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/coffin.storage.png">\
 <div class="kit-item__quantity">x2</div></div></div>\
 </div></div></div>\
-<div class="xbox_custom_kits" ><div class="serverheader">Кит "Магический" - <span>Откат 24ч</span></div>\
+<div class="xbox_custom_kits" ><div class="serverheader">Кит "Магический" (один на все привилегии) - <span>Откат 24ч</span></div>\
 <div class="kit_set"><div class="kit-items">\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://xackuscr.ru/rust/goldskull.png">\
 <div class="kit-item__quantity">x1</div></div></div>\
@@ -464,7 +464,7 @@ curcontent["kit-smert"] = {
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/bed.png">\
 <div class="kit-item__quantity">x1</div></div></div>\
 </div></div></div>\
-<div class="xbox_custom_kits" ><div class="serverheader">Кит "Магический" - <span>Откат 24ч</span></div>\
+<div class="xbox_custom_kits" ><div class="serverheader">Кит "Магический" (один на все привилегии) - <span>Откат 24ч</span></div>\
 <div class="kit_set"><div class="kit-items">\
 <div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://xackuscr.ru/rust/goldskull.png">\
 <div class="kit-item__quantity">x1</div></div></div>\
