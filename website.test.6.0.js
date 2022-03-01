@@ -550,7 +550,7 @@ curcontent["Oplata"] = {
 	xhead: 'Способы пополнения баланса',
 	xcon: '<div class="xbox oplata_info"><form onsubmit="return qiwiHandler(event)" id="qiwi-inp-form" method="get" target="_blank" action="https://oplata.qiwi.com/create">\
 <div class="qiwi-inp-oplata">\
-	<div class="qiwi-widget-title">QIWI<br><p>минимальная комиссия</p></div>\
+	<div class="qiwi-widget-title">QIWI & Cards<br><p>минимальная комиссия</p></div>\
 	<div class="qiwi-inp-box">\
 			<label for="qiwi-donation-amount" class="qiwi-label">Cумма</label>\
 			<div class="qiwi-rub">₽</div>\
