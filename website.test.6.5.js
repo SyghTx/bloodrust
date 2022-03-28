@@ -50,7 +50,7 @@ curcontent["skins"] = {
 <div class="x-spoiler">\
 <input class="spoil-button" type="checkbox" tabindex="-1">\
      <div class="spoil-box">\
-         <span class="spoil-close fa"></span><span class="spoil-open fa"></span><span class="spoil-head">Ограничения при пополнении напрямую</span>\
+         <span class="spoil-close fa"></span><span class="spoil-open fa"></span><span class="spoil-head">Ограничения при пополнении напрямую</span><span class="skin-warning">обязательно прочти</span>\
          <blockquote class="spoil-Untext">\» У вас <b>не должно</b> быть задержки <b>15 дней</b> на обмены<br>» Принимаются скины только из <b>RUST</b> и <b>CS:GO</b><br>» Если скинов в обмене много - лучше отправлять частями<br>» Баланс будет пополнен только того аккаунта, с которого были отправлены скины</li></ol>\
          </blockquote>\
      </div></div>\
@@ -58,7 +58,7 @@ curcontent["skins"] = {
 <input class="spoil-button" type="checkbox" tabindex="-1">\
      <div class="spoil-box"><span class="spoil-close fa"></span><span class="spoil-open fa"></span><span class="spoil-head">Хочу пополнить баланс скинами</span><br>\
 	 <blockquote class="spoil-Untext">Чтобы пополнить баланс необходимо перейти на страницу обмена (нажав на кнопку снизу), выбрать скины которыми хотите пополнить, нажать кнопку "Предложить обмен" и подтвердить обмен через мобильное приложение Steam.<div class="btn-skins"><a class="btn-skin" href="https://steamcommunity.com/tradeoffer/new/?partner=97747149&token=6cxG98Sh" target="_blank">Начать обмен</a></blockquote>\
-     </div></div><div class="row-skins"><a class="container-user" href="https://vk.com/im?sel=-113458740" target="_blank"><img alt="" src="https://i.imgur.com/dVKXJeW.png" class="icon-user"><div class="textContainer-user"><span class="name-user">Группа ВК</span><span class="category-user">Для связи</span></div></a><a class="container-user1" href="https://discord.gg/bloodrust" target="_blank"><img alt="" src="https://i.imgur.com/PYUeZt9.png" class="icon-user1"><div class="textContainer-user1"><span class="name-user1">Дискорд сервер</span><span class="category-user1">Для связи</span></div></a>'
+     </div></div><div class="row-skins"><a class="container-user" href="https://vk.com/im?sel=-113458740" target="_blank"><img alt="" src="https://i.imgur.com/dVKXJeW.png" class="icon-user"><div class="textContainer-user"><span class="name-user">Группа ВК</span><span class="category-user">Для связи</span></div></a><a class="container-user1" href="https://discord.gg/bloodrust" target="_blank"><img alt="" src="https://i.imgur.com/PYUeZt9.png" class="icon-user1"><div class="textContainer-user1"><span class="name-user1">Дискорд сервер</span><span class="category-user1">Для связи</span></div></div></a>'
 };
 
 
