@@ -51,7 +51,7 @@ curcontent["skins"] = {
 <input class="spoil-button" type="checkbox" tabindex="-1">\
      <div class="spoil-box">\
          <span class="spoil-close fa"></span><span class="spoil-open fa"></span><span class="spoil-head">Ограничения при пополнении напрямую</span>\
-         <blockquote class="spoil-Untext">\» У вас <b>не должно</b> быть задержки <b>15 дней</b> на обмены<br>» Принимаются скины только из <b>RUST</b> и <b>CS:GO</b><br>» Если скинов в обмене много - лучше отправлять частями<br>» Баланс будет пополнено только того аккаунта, с которого были отправлены скины</li></ol>\
+         <blockquote class="spoil-Untext">\» У вас <b>не должно</b> быть задержки <b>15 дней</b> на обмены<br>» Принимаются скины только из <b>RUST</b> и <b>CS:GO</b><br>» Если скинов в обмене много - лучше отправлять частями<br>» Баланс будет пополнен только того аккаунта, с которого были отправлены скины</li></ol>\
          </blockquote>\
      </div></div>\
 <div class="x-spoiler">\
