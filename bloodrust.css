@@ -39,6 +39,10 @@ button, input, optgroup, select, textarea {
 .nav-pills [href="/profile/bonuses"] {display: none;}
 .col-lg-8 .xbox .xbox__header {display: none;}
 
+.xbox_server .xbox__header, .xbox_player .xbox__header {
+    display: block !important;
+}
+
 .xbox__body {
     color: black;
 }
@@ -237,6 +241,12 @@ button:focus {
 .dropdown-item:nth-child(4n) { 
   	animation: zoomIn 0.6s;
 }
+.dropdown-item:nth-child(5n) { 
+  	animation: zoomIn 0.8s;
+}
+.dropdown-item:nth-child(6n) { 
+  	animation: zoomIn 1s;
+}
 .dropdown-item:last-child {
   	border-radius: 0px 0px 15px 15px;
 }
@@ -345,7 +355,7 @@ select.form-control:not([size]):not([multiple]) {
 .product__price {
     color: #a6b1e7;
     text-align: end;
-    background: #ffffff;
+    background: unset;
     bottom: 8px;
     right: 10px;
     border-radius: 10px;
@@ -448,7 +458,7 @@ select.form-control:not([size]):not([multiple]) {
     margin-right: -11px;
     color: #e6e6e6;
     text-shadow: none;
-    margin-top: 2px;
+    margin-top: 0px;
 }
 
 @keyframes rotation {
@@ -522,6 +532,10 @@ select.form-control:not([size]):not([multiple]) {
     background: linear-gradient(to right, #a88beb 0%, #decef8 100%);
     animation: load 5s normal forwards;
 }
+.xserver:nth-child(5) .xserver__status .progress .bg-success {
+    background: linear-gradient(to right, #6db3f4 0%, #aed7f0 100%);
+    animation: load 6s normal forwards;
+}
 
 .xserver:nth-child(1) .fa-play:hover {
     color: #dc6048;
@@ -536,7 +550,7 @@ select.form-control:not([size]):not([multiple]) {
     color: #c8b3f3;
 }
 .xserver:nth-child(5) .fa-play:hover {
-    color: #70b446;
+    color: #a8d2f3;
 }
 
 .xserver:nth-child(1) .xserver__title:after {
@@ -579,30 +593,14 @@ select.form-control:not([size]):not([multiple]) {
     color: #777777;
 }
 
-.xserver:nth-child(5) .xserver__status .progress .bg-success {
-    background: linear-gradient(to right, #8d8d8d 0%, #a1a1a1 100%);
-    animation: load 6s normal forwards;
-}
-
-.xserver:nth-child(5) .xserver__status {
-    margin-bottom: 5px;
-    padding-right: 0px;
-    padding-left: 65px;
-}
-.xserver:nth-child(5) .xserver__links {
-    display: flex;
-    margin-top: -21px;
-    margin-left: 00px;
-    margin-right: 30px;
+.xserver:nth-child(5) .xserver__title:after {
+    content: "NoLimit Procedural" ;
     font-weight: 100;
-    font-size: 11px;
-    color: black;
-}
-.xserver:nth-child(5) .progress-bar {
-    height: 1rem;
-}
-.xserver:nth-child(5) .xserver__title {
-    display: none;
+    margin-left: 4px;
+    font-size: 13px;
+    opacity: 0.5;
+    transition: all 0.5s ease-out;
+    color: #777777;
 }
 
 /*nav-pills*/
@@ -671,7 +669,7 @@ select.form-control:not([size]):not([multiple]) {
 }
 @media (max-width: 767px)
 {
-.server-navigation .nav-pills .nav-link:last-child {
+.server-navigation .nav-pills .nav-link:nth-child(3) {
   border-radius: 0px 0px 15px 15px;
 }
 }
@@ -979,30 +977,26 @@ label {
     background: white;
 }
 .modal-item .input-group-btn:not(:first-child)>.btn, .input-group-btn:not(:first-child)>.btn-group {
-    background: #a8dbbf;
+    background: white;
   	opacity: 1;
 }
 .input-group-btn:not(:last-child)>.btn, .input-group-btn:not(:last-child)>.btn-group {
-    background: #dbaea8;
+    background: white;
     opacity: 1;
 }
 .fa-minus:before {
     content: "\F068";
-  	color: white;
+  	color: black;
 }
 .fa-plus:before {
     content: "\F067";
-    color: white;
+    color: black;
 }
 .modal-body .form-control {
     padding: 13px 13px 13px 13px;
 }
 .input-group-btn .form-control {
     text-align: center;
-}
-.modal-body .text-center:after {
-    content: ' Средства которые вернутся на баланс станут бонусными и перевести их другому пользователю не получится.';
-    font-weight: 100;
 }
 .text-center {
     text-align: center!important;
@@ -1343,25 +1337,58 @@ label {
 /*Киви*/
 
 #qiwi-inp-form {
-    margin-right: 2%;
+    margin-right: 10px;
+}
+.oplata_cont {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 .oplata_info {
     display: flex;
     justify-content: center;
     margin-top: 30px;
+    flex-direction: column;
+}
+.forms-oplata {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 .qiwi-widget-title::selection,#qiwi-donation-amount::selection {
   background:#ff8c00;
 }
-@media (max-width:767px){
-.oplata_info{
-    display:grid;
-    justify-content:center
+
+@media (max-width: 991px) {
+.oplata_info {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.forms-oplata {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.oplata_cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container-oplata:nth-child(1) {
+    margin-right: 0px !important;
+}
+.container-oplata {
+    margin-bottom: 10px
 }
 #qiwi-inp-form {
-    margin-bottom:15px
+    margin-right: 0px !important;
 }
 }
+
 .qiwi-inp-main {
     display:flex;
     flex-direction:column;
@@ -1480,6 +1507,24 @@ label {
     background-color:transparent;
     padding-left:0.8rem
 }
+#fk-donation-amount {
+    outline: none;
+    margin: 25px auto 5px;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: left;
+    color: inherit;
+    padding: 0 16px 0 0;
+    -moz-appearance: textfield;
+    -webkit-appearance: none;
+    box-sizing: border-box;
+    border: 0;
+    border-bottom: 1px solid #d8d8d8;
+    box-shadow: none;
+    background-color: transparent;
+    padding-left: 0.8rem;
+}
 #qiwi-donation-amount:focus {
 	border-bottom:1px solid #ff8c00
 }
@@ -1502,8 +1547,8 @@ label {
     text-overflow: ellipsis;
 }
 .qiwi-widget-title p {
-    font-size: 13px;
-    color: #b4b4b4;
+    font-size: 14px;
+    color: #767676;
     font-weight: 100;
 }
 .block_by_category:nth-child(3) .kit-items__item {
@@ -1523,6 +1568,7 @@ label {
     width: 300px;
     height: 249px;
     border-radius: 15px;
+    margin-bottom: 10px;
     background-color: #fff;
     position: relative;
     -webkit-box-sizing: border-box;
@@ -1531,7 +1577,6 @@ label {
 }
 .container-oplata {
     display: -webkit-inline-box;
-    margin-bottom: 15px;
     padding: 16px;
     height: 73px;
     width: 300px;
@@ -1575,15 +1620,16 @@ label {
 }
 
 .container-oplata:nth-child(1) {
-  animation: zoomIn 0.6s;
+  animation: zoomIn 1s;
+  margin-right: 10px;
 }
 .container-oplata:nth-child(2) {
-  animation: zoomIn 0.8s;
+  animation: zoomIn 1.2s;
 }
-.container-oplata:nth-child(3) {
-  animation: zoomIn 1s;
+#qiwi-inp-form:nth-child(1) {
+    animation: zoomIn 0.6s;
 }
-.qiwi-inp-oplata {
+#fk-inp-form:nth-child(2) {
     animation: zoomIn 0.8s;
 }
 .name-user {
@@ -1894,6 +1940,9 @@ blockquote {
 }
 .avatar {
   animation: zoomIn 1s;
+}
+.avatar {
+    background: #dfdfdf;
 }
 
 /*Jopa*/
@@ -2290,9 +2339,11 @@ blockquote {
 
 .serverheader span {
     background: #d4d4d4;
-    padding: 2px 6px 2px 8px;
+    padding: 2px 12px 2px 12px;
     border-radius: 20px;
     color: white;
+    text-transform: uppercase;
+    font-size: 15px;
 }
 
 .serverheader span:before {
@@ -2313,26 +2364,37 @@ blockquote {
     width: unset;
 }
 
+.kit-item_blueprint .kit-item__image {
+    background: url(https://i.imgur.com/tXpilqO.png);
+    background-size: cover;
+}
+.kit-item_blueprint .kit-item__name {
+    display: none;
+}
+
 .kit-item {
     position: relative;
     background: white;
     margin: 8px;
-    border-radius: 25px;
+    border-radius: 15px;
     overflow: hidden;
     text-align: center;
     cursor: pointer;
+	transform: rotate(0deg);
     transition: all 0.3s;
+	box-shadow: unset;
 }
 
 .kit-item:hover {
-    transform: scale(1.04);
+    transform: scale(1.04) rotate(-5deg);
     transition: all 0.3s;
+	box-shadow: 0px 10px 10px -8px rgba(0, 0, 0, 0.1);
 }
 
 .kit-item__name, .kit-item__quantity {
     position: absolute;
-    color: #b7b7b7;
-    font-size: 24px;
+    color: #e0e0e0;
+    font-size: 17px;
 }
 
 .kit-item__quantity {
@@ -2396,12 +2458,11 @@ blockquote {
 }
 
 .kit_set .kit-item__quantity {
-    background: rgba(1, 1, 1, 0.5);
-    color: #fff;
+    background: unset;
+    color: black;
     font-size: 14px;
-    right: 8px;
-    bottom: 10px;
-    padding: 1px 6px;
+    padding: 0px 0px 5px 0px;
+    margin-top: -15px;
     border-radius: 0px;
 }
 .kit_set .kit-item__quantity {
@@ -2411,6 +2472,10 @@ blockquote {
 .xbox_custom_kits {
 	margin-top: 20px;
 }
+
+
+/*Прочее*/
+
 
 .server-description {
     background: white;
@@ -2425,4 +2490,38 @@ blockquote {
 .footer-link__list {
     margin-bottom: 18px;
 }
+}
+
+.product__servers {
+    display: none;
+}
+.sk-spinner-wave div {
+    background-color: black;
+}
+
+.xbox_custom_rules {
+  color: black;
+}
+
+.xserver__links a {
+    margin-top: 1px!important;
+}
+.xserver__links {
+    margin-top: -30px !important;
+    color: white;
+}
+.xserver:last-child {
+    display: none !important;
+}
+
+.avatar {
+    background: #dfdfdf;
+}
+
+.xbox_player .xbox__header {
+    display: block !important;
+}
+
+.fa-play {
+    margin-top: 0px !important;
 }
