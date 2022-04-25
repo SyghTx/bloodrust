@@ -43,7 +43,7 @@ curcontent["rules"] = {
 
 curcontent["skins"] = {
 	xhead: 'Пополнение скинами напрямую',
-	xcon: '<div class="x-spoiler">\
+	xcon: '<div class="skin-content"><div class="spoiler"><div class="x-spoiler">\
 <input class="spoil-button" type="checkbox" tabindex="-1">\
      <div class="spoil-box"><span class="spoil-close fa"></span><span class="spoil-open fa"></span><span class="spoil-head">Что значит пополнение напрямую?</span><br><blockquote class="spoil-Untext">Обычно пополнение скинами происходит через сторонние сервисы (SkinPay или Skins.Cash), но в этом случае игрок который пополняет баланс теряет около ~50% от цены скинов. Мы же хотим предложить вам пополнение баланса скинами практически по ценам с торговой площадки, без каких-либо посредников.</span></blockquote>\
      </div></div>\
@@ -58,7 +58,7 @@ curcontent["skins"] = {
 <input class="spoil-button" type="checkbox" tabindex="-1">\
      <div class="spoil-box"><span class="spoil-close fa"></span><span class="spoil-open fa"></span><span class="spoil-head">Хочу пополнить баланс скинами</span><br>\
 	 <blockquote class="spoil-Untext">Чтобы пополнить баланс необходимо перейти на страницу обмена (нажав на кнопку снизу), выбрать скины которыми хотите пополнить, нажать кнопку "Предложить обмен" и подтвердить обмен через мобильное приложение Steam.<div class="btn-skins"><a class="btn-skin" href="https://steamcommunity.com/tradeoffer/new/?partner=97747149&token=6cxG98Sh" target="_blank">Начать обмен</a></blockquote>\
-     </div></div><div class="row-skins"><a class="container-user" href="https://vk.com/im?sel=-113458740" target="_blank"><img alt="" src="https://i.imgur.com/dVKXJeW.png" class="icon-user"><div class="textContainer-user"><span class="name-user">Группа ВК</span><span class="category-user">Для связи</span></div></a><a class="container-user1" href="https://discord.gg/bloodrust" target="_blank"><img alt="" src="https://i.imgur.com/PYUeZt9.png" class="icon-user1"><div class="textContainer-user1"><span class="name-user1">Дискорд сервер</span><span class="category-user1">Для связи</span></div></div></a>'
+     </div></div></div><div class="warnings_skin">⚠ Перед тем как отправлять скины обязательно ознакомьтесь с <b>ограничениями при пополнении скинами</b> и <b>авторизируйтесь на сайте</b>, а так-же учтите, средства за скины будут зачислены только на баланс аккаунта с которого они были отправлены.</div></div>'
 };
 
 
