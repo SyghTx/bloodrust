@@ -571,11 +571,11 @@ curcontent["Oplata"] = {
 </form>\
 <form onsubmit="return freekassaHandler(event)" class="qiwi-inp-form" id="fk-inp-form" method="get" target="_blank" action="https://enot.io/pay">\
 <label for="fk-donation-amount" class="qiwi-inp-oplata" id="qiwi-inp-other">\
-	<div class="qiwi-widget-title">Enot.io<br><p>crypto, ЮMoney, Perfect Money</p></div>\
+	<div class="qiwi-widget-title">Enot.io<br><p>иностранные карты и крипта</p></div>\
 	<div class="qiwi-inp-box">\
 			<label for="fk-donation-amount" class="qiwi-label">Cумма</label>\
 			<div class="qiwi-rub">₽</div>\
-			<input type="tel" placeholder="Sum" id="fk-donation-amount" name="oa" required="" value="">\
+			<input type="tel" placeholder="Сумма" id="fk-donation-amount" name="oa" required="" value="">\
 			<input type="hidden" id="fk-donation-sign" name="s" value="">\
 			<input type="hidden" id="enot-donation-id" name="o" value="">\
 			<input type="hidden" id="fk-donation-comment" name="cf" value="">\
@@ -585,7 +585,7 @@ curcontent["Oplata"] = {
 			<div class="qiwi-error-box" id="fk-error-box"></div>\
 	</div>\
 	<div class="qiwi-button-box">\
-		<button class="qiwi-submit-main" id="fk-submit-main" width="159px" type="submit">Pay</button>\
+		<button class="qiwi-submit-main" id="fk-submit-main" width="159px" type="submit">Оплатить</button>\
 	</div>\
 	<div class="payment-block">\
         <div class="payment-type payment-block-steam"></div><div class="payment-type payment-block-crypto"></div><div class="payment-type payment-block-cash"></div><div class="payment-type payment-block-yoomoney"></div><!--<div class="payment-type payment-block-megafon"></div>-->\
