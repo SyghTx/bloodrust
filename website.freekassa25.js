@@ -562,7 +562,7 @@ curcontent["Oplata"] = {
 			<input type="hidden" id="qiwi-donation-comment" name="comment" value="Пожертвование на bloodrust.ru">\
 			<input type="hidden" name="publicKey" value="48e7qUxn9T7RyYE1MVZswX1FRSbE6iyCj2gCRwwF3Dnh5XrasNTx3BGPiMsyXQFNKQhvukniQG8RTVhYm3iPyYb3nRBuxevDsKY6rAMEqp3auWv8y29CEHXiGRrVu8cvxDM2FKrtMeY2L9V4uZF8MvgEXun2DKpb2x2khK9Wd9ZXaLMo1fEEUPw7JjHm2">\
 			<input type="hidden" id="qiwi-donation-account" name="account" value="0">\
-			<input type="hidden" name="customFields[themeCode]" value="Danyl-Kzv6jl9NlE">\
+			<input type="hidden" name="customFields[themeCode]" value="Danyl-KQ9j5jeOeo">\
 			<input type="hidden" id="qiwi-successUrl" name="successUrl" value="https://bloodrust.ru">\
 			<div class="qiwi-error-box" id="qiwi-error-box"></div>\
 	</div>\
