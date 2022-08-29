@@ -756,7 +756,7 @@ function qiwiHandler(e){
 	var inputval = document.getElementById('qiwi-donation-amount').value;
 	var inputfloat = parseFloat(inputval).toFixed(2);
 	if(inputfloat < 150 || inputfloat > 15000 || isNaN(inputfloat)){
-		document.getElementById('qiwi-error-box').innerText = "От 120 до 15000 RUB";
+		document.getElementById('qiwi-error-box').innerText = "От 150 до 15000 RUB";
 		e.preventDefault();
 		return false;
 	}else{
