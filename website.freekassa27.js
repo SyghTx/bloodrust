@@ -560,7 +560,7 @@ curcontent["Oplata"] = {
 			<div class="qiwi-rub">₽</div>\
 			<input type="tel" placeholder="Сумма" id="qiwi-donation-amount" name="amount" required="" value="">\
 			<input type="hidden" id="qiwi-donation-comment" name="comment" value="Пожертвование на bloodrust.ru">\
-			<input type="hidden" name="publicKey" value="48e7qUxn9T7RyYE1MVZswX1FRSbE6iyCj2gCRwwF3Dnh5XrasNTx3BGPiMsyXQFNKQhvukniQG8RTVhYm3iPs3gNggFKzubM8g7ocg4Mkz85xGXXT6YYjWFsEkk7WaPrB4oJgA6Y1qumFtKrPbHSaXMRSyQYbAaZS29v6QCeNAvnJR4xjNwDTXwaKgD3M">\
+			<input type="hidden" name="publicKey" value="48e7qUxn9T7RyYE1MVZswX1FRSbE6iyCj2gCRwwF3Dnh5XrasNTx3BGPiMsyXQFNKQhvukniQG8RTVhYm3iP41L5FeJwQwwonvju9Y4nW8D1XD4UnFfdfn1ixQEW6PzikZpL1a3sXxvtNdufC4LfmqdGFDYUXymoe79eocUFFDPyEHxKwKPF28sYc7hXF">\
 			<input type="hidden" id="qiwi-donation-account" name="account" value="0">\
 			<input type="hidden" name="customFields[themeCode]" value="Danyl-KSsYnA-Jn5">\
 			<input type="hidden" id="qiwi-successUrl" name="successUrl" value="https://bloodrust.ru">\
@@ -755,7 +755,7 @@ function qiwiHandler(e){
 	//e.preventDefault();
 	var inputval = document.getElementById('qiwi-donation-amount').value;
 	var inputfloat = parseFloat(inputval).toFixed(2);
-	if(inputfloat < 120 || inputfloat > 15000 || isNaN(inputfloat)){
+	if(inputfloat < 150 || inputfloat > 15000 || isNaN(inputfloat)){
 		document.getElementById('qiwi-error-box').innerText = "От 120 до 15000 RUB";
 		e.preventDefault();
 		return false;
