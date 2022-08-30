@@ -560,9 +560,9 @@ curcontent["Oplata"] = {
 			<div class="qiwi-rub">₽</div>\
 			<input type="tel" placeholder="Сумма" id="qiwi-donation-amount" name="amount" required="" value="">\
 			<input type="hidden" id="qiwi-donation-comment" name="comment" value="Пожертвование на bloodrust.ru">\
-			<input type="hidden" name="publicKey" value="48e7qUxn9T7RyYE1MVZswX1FRSbE6iyCj2gCRwwF3Dnh5XrasNTx3BGPiMsyXQFNKQhvukniQG8RTVhYm3iP41L5FeJwQwwonvju9Y4nW8D1XD4UnFfdfn1ixQEW6PzikZpL1a3sXxvtNdufC4LfmqdGFDYUXymoe79eocUFFDPyEHxKwKPF28sYc7hXF">\
+			<input type="hidden" name="publicKey" value="48e7qUxn9T7RyYE1MVZswX1FRSbE6iyCj2gCRwwF3Dnh5XrasNTx3BGPiMsyXQFNKQhvukniQG8RTVhYm3iP5PmZALWBZzigAwZPgBaiQJxNXRPnYSMYvD3zd1zbfq5zbrysAnz9qsedngdRmMtRxzeQD97YJcFFoUpD5axiE75cGB8dkzM6UjBdak2Xt">\
 			<input type="hidden" id="qiwi-donation-account" name="account" value="0">\
-			<input type="hidden" name="customFields[themeCode]" value="Danyl-Kzv6jl9NlE">\
+			<input type="hidden" name="customFields[themeCode]" value="Danyl-KzGz9oONnl">\
 			<input type="hidden" id="qiwi-successUrl" name="successUrl" value="https://bloodrust.ru">\
 			<div class="qiwi-error-box" id="qiwi-error-box"></div>\
 	</div>\
