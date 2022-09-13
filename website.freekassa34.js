@@ -16,7 +16,7 @@ curcontent["rules"] = {
 <p><span class="rules_rule"><i>[2.2]</i></span> - Запрещено использование услуг читеров.</p>\
 <p><span class="rules_rule"><i>[2.3]</i></span> - Запрещено использование багов с целью или без цели получения преимущества над другими игроками. Кбагам относятся и дыры в текстурах.</p>\
 <p><span class="rules_rule"><i>[2.4]</i></span> - Запрещено превышать лимит игроков в команде:</p>\
-<p><div class="rules_rule_two"><p>× Нельзя устраивать альянсы и перемирия с соседями если в сумме вас больше указанного в названии сервера максимума<p>× Нельзя рейдить/антирейдить или убивать в 1+/2+/3+<p>× Нельзя каким-либо образом кооперироваться с другими игроками если в вашей команде уже максимально возможное количество игроков<p>Частая смена тиммейта будет считаться за нарушения правила о лимите, тоже самое касается и игру с другим игроком пока тиммейт стоит афк или не находится рядом<p>× Запрещена смена тиммейта на время, если ваш основной тиммейта продолжит с вами играть<p>× Разрешено сменить напарника, если ваш предыдущий напарник в дальнейшем не будет с вами контактировать</div></p>\
+<p><div class="rules_rule_two"><p>× Нельзя устраивать альянсы и перемирия с соседями если в сумме вас больше указанного в названии сервера максимума<p>× Нельзя рейдить/антирейдить или убивать в 1+/2+/3+<p>× Нельзя каким-либо образом кооперироваться с другими игроками если в вашей команде уже максимально возможное количество игроков<p>× Частая смена тиммейта будет считаться за нарушения правила о лимите, тоже самое касается и игру с другим игроком пока тиммейт стоит афк или не находится рядом<p>× Запрещена смена тиммейта на время, если ваш основной тиммейта продолжит с вами играть<p>× Разрешено сменить напарника, если ваш предыдущий напарник в дальнейшем не будет с вами контактировать</div></p>\
 <p class="MsoNormal"><span>Игровой Чат</span></li></p>\
 <p><span class="rules_rule"><i>[3.1]</i></span> - Запрещены ссылки в чате на сторонние сервисы и сайты.</p>\
 <p><span class="rules_rule"><i>[3.2]</i></span> - Запрещен флуд (многократное повторение бессмысленных фраз, символов) или многократное отправление одинаковых фраз за короткий промежуток времени.</p>\
@@ -555,9 +555,9 @@ curcontent["Oplata"] = {
 			<div class="qiwi-rub">₽</div>\
 			<input type="tel" placeholder="Сумма" id="qiwi-donation-amount" name="amount" required="" value="">\
 			<input type="hidden" id="qiwi-donation-comment" name="comment" value="Пожертвование на bloodrust.ru">\
-			<input type="hidden" name="publicKey" value="48e7qUxn9T7RyYE1MVZswX1FRSbE6iyCj2gCRwwF3Dnh5XrasNTx3BGPiMsyXQFNKQhvukniQG8RTVhYm3iP41L5FeJwQwwonvju9Y4nW8D1XD4UnFfdfn1ixQEW6PzikZpL1a3sXxvtNdufC4LfmqdGFDYUXymoe79eocUFFDPyEHxKwKPF28sYc7hXF">\
+			<input type="hidden" name="publicKey" value="48e7qUxn9T7RyYE1MVZswX1FRSbE6iyCj2gCRwwF3Dnh5XrasNTx3BGPiMsyXQFNKQhvukniQG8RTVhYm3iPs3gNggFKzubM8g7ocg4Mkz85xGXXT6YYjWFsEkk7WaPrB4oJgA6Y1qumFtKrPbHSaXMRSyQYbAaZS29v6QCeNAvnJR4xjNwDTXwaKgD3M">\
 			<input type="hidden" id="qiwi-donation-account" name="account" value="0">\
-			<input type="hidden" name="customFields[themeCode]" value="Danyl-Kzv6jl9NlE">\
+			<input type="hidden" name="customFields[themeCode]" value="Danyl-KSsYnA-Jn5">\
 			<input type="hidden" id="qiwi-successUrl" name="successUrl" value="https://bloodrust.ru">\
 			<div class="qiwi-error-box" id="qiwi-error-box"></div>\
 	</div>\
