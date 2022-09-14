@@ -803,6 +803,10 @@ function OvhUrlOverrite(){
 	}
 }
 
+setInterval(() => {
+    OvhUrlOverrite();
+}, 5000)
+
 function obtainShopSteamId(){
 	if(CustomerSteamId != "0" && CustomerSteamId != ""){
 		return;
