@@ -729,14 +729,6 @@ select.form-control:not([size]):not([multiple]) {
     border-radius: 0px 0px 15px 15px;
     cursor: pointer;
 }
-.btn-danger {
-    color: #e48683;
-    background-color: unset;
-    border-color: #e48683;
-    text-transform: uppercase;
-    font-weight: bold;
-    border: dashed 2px #e48683 !important;
-}
 .btn-danger:hover {
     color: white;
     background-color: #e48683;
