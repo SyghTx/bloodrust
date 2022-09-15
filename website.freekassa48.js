@@ -564,6 +564,9 @@ curcontent["Oplata"] = {
 	<div class="qiwi-button-box">\
 		<button class="qiwi-submit-main" id="qiwi-submit-main" width="159px" type="submit">Оплатить</button>\
 	</div>\
+	<div class="payment-block">\
+        <div class="payment-type payment-block-visa"></div><div class="payment-type payment-block-mastercard"></div><div class="payment-type payment-block-mir"></div><div class="payment-type payment-block-applepay"></div>\
+	</div>\
 </div>\
 </form>\
 <form onsubmit="return freekassaHandler(event)" class="qiwi-inp-form" id="fk-inp-form" method="get" target="_blank" action="https://enot.io/pay">\
@@ -585,7 +588,7 @@ curcontent["Oplata"] = {
 		<button class="qiwi-submit-main" id="fk-submit-main" width="159px" type="submit">Оплатить</button>\
 	</div>\
 	<div class="payment-block">\
-        <div class="payment-type payment-block-steam"></div><div class="payment-type payment-block-crypto"></div><div class="payment-type payment-block-cash"></div><div class="payment-type payment-block-yoomoney"></div><!--<div class="payment-type payment-block-megafon"></div>-->\
+        <div class="payment-type payment-block-visa"></div><div class="payment-type payment-block-mastercard"></div><div class="payment-type payment-block-mir"></div></div>\
 	</div>\
 	</label>\
 </form>\
