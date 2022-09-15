@@ -547,28 +547,6 @@ curcontent["Oplata"] = {
 	xhead: 'Способы пополнения баланса',
 	xcon: '<div class="xbox oplata_info">\
 <div class="forms-oplata">\
-<form onsubmit="return qiwiHandler(event)" id="qiwi-inp-form" method="get" target="_blank" action="https://oplata.qiwi.com/create">\
-<div class="qiwi-inp-oplata">\
-	<div class="qiwi-widget-title">Qiwi & Карты<br><p>минимальная комиссия</p></div>\
-	<div class="qiwi-inp-box">\
-			<label for="qiwi-donation-amount" class="qiwi-label">Cумма</label>\
-			<div class="qiwi-rub">₽</div>\
-			<input type="tel" placeholder="Сумма" id="qiwi-donation-amount" name="amount" required="" value="">\
-			<input type="hidden" id="qiwi-donation-comment" name="comment" value="Пожертвование на bloodrust.ru">\
-			<input type="hidden" name="publicKey" value="48e7qUxn9T7RyYE1MVZswX1FRSbE6iyCj2gCRwwF3Dnh5XrasNTx3BGPiMsyXQFNKQhvukniQG8RTVhYm3iP41L5FeJwQwwonvju9Y4nW8D1XD4UnFfdfn1ixQEW6PzikZpL1a3sXxdhX2E92EpLgpKjQkxY9kzqDLX8JgZoxbdReH6dfmTDy7YsSDmkX">\
-			<input type="hidden" id="qiwi-donation-account" name="account" value="0">\
-			<input type="hidden" name="customFields[themeCode]" value="Danyl-Kzv6jl9NlE">\
-			<input type="hidden" id="qiwi-successUrl" name="successUrl" value="https://bloodrust.ru">\
-			<div class="qiwi-error-box" id="qiwi-error-box"></div>\
-	</div>\
-	<div class="qiwi-button-box">\
-		<button class="qiwi-submit-main" id="qiwi-submit-main" width="159px" type="submit">Оплатить</button>\
-	</div>\
-	<div class="payment-block">\
-        <div class="payment-type payment-block-visa"></div><div class="payment-type payment-block-mastercard"></div><div class="payment-type payment-block-mir"></div><div class="payment-type payment-block-applepay"></div>\
-	</div>\
-</div>\
-</form>\
 <form onsubmit="return freekassaHandler(event)" class="qiwi-inp-form" id="fk-inp-form" method="get" target="_blank" action="https://enot.io/pay">\
 <label for="fk-donation-amount" class="qiwi-inp-oplata" id="qiwi-inp-other">\
 	<div class="qiwi-widget-title">Карты & Crypto<br><p>ЮMoney, иностранные карты</p></div>\
@@ -591,6 +569,28 @@ curcontent["Oplata"] = {
         <div class="payment-type payment-block-visa"></div><div class="payment-type payment-block-mastercard"></div><div class="payment-type payment-block-mir"></div><div class="payment-type payment-block-applepay"></div>\
 	</div>\
 	</label>\
+</form>\
+<form onsubmit="return qiwiHandler(event)" id="qiwi-inp-form" method="get" target="_blank" action="https://oplata.qiwi.com/create">\
+<div class="qiwi-inp-oplata">\
+	<div class="qiwi-widget-title">Qiwi & Карты<br><p>минимальная комиссия</p></div>\
+	<div class="qiwi-inp-box">\
+			<label for="qiwi-donation-amount" class="qiwi-label">Cумма</label>\
+			<div class="qiwi-rub">₽</div>\
+			<input type="tel" placeholder="Сумма" id="qiwi-donation-amount" name="amount" required="" value="">\
+			<input type="hidden" id="qiwi-donation-comment" name="comment" value="Пожертвование на bloodrust.ru">\
+			<input type="hidden" name="publicKey" value="48e7qUxn9T7RyYE1MVZswX1FRSbE6iyCj2gCRwwF3Dnh5XrasNTx3BGPiMsyXQFNKQhvukniQG8RTVhYm3iP41L5FeJwQwwonvju9Y4nW8D1XD4UnFfdfn1ixQEW6PzikZpL1a3sXxdhX2E92EpLgpKjQkxY9kzqDLX8JgZoxbdReH6dfmTDy7YsSDmkX">\
+			<input type="hidden" id="qiwi-donation-account" name="account" value="0">\
+			<input type="hidden" name="customFields[themeCode]" value="Danyl-Kzv6jl9NlE">\
+			<input type="hidden" id="qiwi-successUrl" name="successUrl" value="https://bloodrust.ru">\
+			<div class="qiwi-error-box" id="qiwi-error-box"></div>\
+	</div>\
+	<div class="qiwi-button-box">\
+		<button class="qiwi-submit-main" id="qiwi-submit-main" width="159px" type="submit">Оплатить</button>\
+	</div>\
+	<div class="payment-block">\
+        <div class="payment-type payment-block-visa"></div><div class="payment-type payment-block-mastercard"></div><div class="payment-type payment-block-mir"></div><div class="payment-type payment-block-applepay"></div>\
+	</div>\
+</div>\
 </form>\
 </div>\
 <div class="oplata_cont"><a class="container-oplata" id="qiwi-inp-other2">\
