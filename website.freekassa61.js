@@ -549,7 +549,7 @@ curcontent["Oplata"] = {
 <div class="forms-oplata">\
 <form onsubmit="return qiwiHandler(event)" id="qiwi-inp-form" method="get" target="_blank" action="https://oplata.qiwi.com/create">\
 <div class="qiwi-inp-oplata">\
-	<div class="qiwi-widget-title">Qiwi & Карты<br><p>минимальная комиссия</p></div>\
+	<div class="qiwi-widget-title">Qiwi<br><p>минимальная комиссия</p></div>\
 	<div class="qiwi-inp-box">\
 			<label for="qiwi-donation-amount" class="qiwi-label">Cумма</label>\
 			<div class="qiwi-rub">₽</div>\
