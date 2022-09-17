@@ -565,13 +565,13 @@ curcontent["Oplata"] = {
 		<button class="qiwi-submit-main" id="qiwi-submit-main" width="159px" type="submit">Оплатить</button>\
 	</div>\
 	<div class="payment-block">\
-        <div class="payment-type payment-block-visa"></div><div class="payment-type payment-block-mastercard"></div><div class="payment-type payment-block-mir"></div><div class="payment-type payment-block-qiwi"></div>\
+        <div class="payment-type payment-block-visa"></div><div class="payment-type payment-block-mastercard"></div><div class="payment-type payment-block-qiwi"></div>\
 	</div>\
 </div>\
 </form>\
 <form onsubmit="return freekassaHandler(event)" class="qiwi-inp-form" id="fk-inp-form" method="get" target="_blank" action="https://enot.io/pay">\
 <label for="fk-donation-amount" class="qiwi-inp-oplata" id="qiwi-inp-other">\
-	<div class="qiwi-widget-title">Банковские карты<br><p>иностранные карты и криптовалюты</p></div>\
+	<div class="qiwi-widget-title">Enot.io<br><p>иностранные карты и криптовалюты</p></div>\
 	<div class="qiwi-inp-box">\
 			<label for="fk-donation-amount" class="qiwi-label">Cумма</label>\
 			<div class="qiwi-rub">₽</div>\
@@ -730,8 +730,8 @@ function freekassaHandler(e){
 	qiwiFormHandle();
 	var inputval = document.getElementById('fk-donation-amount').value;
 	var inputfloat = parseFloat(inputval);
-	if(inputfloat < 15 || inputfloat > 15000 || isNaN(inputfloat)){
-		document.getElementById('fk-error-box').innerText = "От 15 до 15000 RUB";
+	if(inputfloat < 50 || inputfloat > 15000 || isNaN(inputfloat)){
+		document.getElementById('fk-error-box').innerText = "От 50 до 15000 RUB";
 		e.preventDefault();
 		return false;
 	}else{
