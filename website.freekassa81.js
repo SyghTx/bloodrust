@@ -571,7 +571,7 @@ curcontent["Oplata"] = {
 </form>\
 <form onsubmit="return freekassaHandler(event)" class="qiwi-inp-form" id="fk-inp-form" method="get" target="_blank" action="https://enot.io/pay">\
 <label for="fk-donation-amount" class="qiwi-inp-oplata" id="qiwi-inp-other">\
-	<div class="qiwi-widget-title">Банковские карты<br><p>+ иностранные карты и криптовалюта</p></div>\
+	<div class="qiwi-widget-title">Дополнительный способ<br><p>иностранные карты и криптовалюта</p></div>\
 	<div class="qiwi-inp-box">\
 			<label for="fk-donation-amount" class="qiwi-label">Cумма</label>\
 			<div class="qiwi-rub">₽</div>\
