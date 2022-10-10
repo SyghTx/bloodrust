@@ -886,13 +886,13 @@ label {
 	transform: scale(1);
   	transition: all 100ms ease-out;
 }
-.btn-success:hover {
+.btn-success:hover, .btn-success:focus {
     background: #a6e170;
     border: none;
     color: #749f4d;
     opacity: 1;
 	transform: scale(1);
-  	transition: all 100ms ease-out;
+  	transition: all 100ms ease-out !important;
 }
 .btn-success:active {
     transform: scale(0.9);
