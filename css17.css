@@ -954,13 +954,13 @@ label {
     width: unset;
 }
 .btn-secondary {
-   color: #909090;
-   background: #d4d4d4;
-   transition: none;
+    color: #000000;
+    background: #ffffff;
+    transition: none;
 }
 .btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active, .btn-secondary:disabled {
-    color: #b7b7b7;
-    background: #e5e5e5;
+    color: #000000;
+    background: #ffffff;
 }
 .form-control:disabled, .form-control[readonly] {
     background: white;
