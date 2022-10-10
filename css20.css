@@ -961,7 +961,7 @@ label {
 }
 .btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active, .btn-secondary:disabled {
     color: #000000;
-	border: solid #ffffff 1px;
+	border: solid #ebebeb 1px;
     background: #ffffff;
 }
 .form-control:disabled, .form-control[readonly] {
