@@ -886,6 +886,14 @@ label {
 	transform: scale(1);
   	transition: all 100ms ease-out;
 }
+.btn-success:hover {
+    background: #a6e170;
+    border: none;
+    color: #749f4d;
+    opacity: 1;
+	transform: scale(1);
+  	transition: all 100ms ease-out;
+}
 .btn-success:active {
     transform: scale(0.9);
 }
