@@ -932,7 +932,7 @@ label {
 .modal .modal-content {
     background: #f3f4f6;
     border-radius: 15px;
-    padding: 15px;
+    padding: 0px;
     color: #909090;
 }
 .modal .modal-header h4 {
