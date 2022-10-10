@@ -1348,10 +1348,10 @@ label {
     right: 10px;
     bottom: 10px;
     text-align: center;
-    background: linear-gradient(-45deg, #d0b155, #6cb347, #adc6e9, #adb7e9);
+    background: linear-gradient(-45deg, #69b7eb, #b3dbd3, #f4d6db);
     background-size: 400% 400%;
     animation: gradient 5s ease infinite;
-    border-radius: 15px;
+    border-radius: 12px;
     color: white;
 }
 .product[href="/products/1057256"] .product__name:after {
