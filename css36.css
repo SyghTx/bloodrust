@@ -2635,7 +2635,7 @@ blockquote {
   	position: absolute;
     z-index: 5;
     bottom: 0%;
-    left: 50%;
+    left: 30%;
   	opacity: 0;
   	margin-left: 20px;
     transition: opacity 220ms ease-out;
