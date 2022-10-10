@@ -879,15 +879,15 @@ label {
     color: #ffffff;
 }
 .btn-success {
-    background: #56bf85;
+    background: #a6e170;
     border: none;
-    color: #fff;
+    color: #749f4d;
     opacity: 1;
 }
-.btn-success:hover {
-    background: #47A571;
+.btn-success {
+    background: #bee19f;
     border: none;
-    color: #fff;
+    color: #91bd69;
     opacity: 1;
 }
 
