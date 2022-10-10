@@ -941,8 +941,8 @@ label {
     display: block;
     text-align: center;
     color: #bbbbbb;
-    padding-top: 15px;
-  	text-transform: uppercase;
+    padding-top: 30px;
+    text-transform: uppercase;
 }
 .input-group-btn .modal .btn {
     box-shadow: unset;
@@ -995,12 +995,13 @@ label {
     justify-content: right;
 }
 .modal-title {
-    margin-bottom: 0;
-    line-height: 1.5;
+    font-size: 26px;
+    font-weight: bold;
+    display: block;
     text-align: center;
-    color: #bdbdbd;
+    color: #bbbbbb;
+    padding-top: 30px;
     text-transform: uppercase;
-  	font-weight: bold;
 }
 
 /*Рулетка*/
