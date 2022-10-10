@@ -1080,10 +1080,9 @@ label {
     height: 240px;
     padding: 25px;
     overflow: hidden;
-    border-radius: 35px;
-    background: #fff;
+    border-radius: 30px;
     transform: scale(0.9);
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05);
+    background: linear-gradient(311deg, rgba(0,0,0,0), #ffffff);
 }
 
 .roulette:before {
