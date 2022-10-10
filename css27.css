@@ -1023,7 +1023,7 @@ label {
     text-transform: uppercase;
 }
 .modal-footer {
-    margin-top: 15px;
+    margin-top: 10px;
 }
 .modal .btn {
     border-radius: 12px;
@@ -1031,7 +1031,7 @@ label {
   	padding: 10px 25px 10px 25px;
 }
 .service__description {
-    margin: 10px 0px 10px 0px;
+    margin: 10px 0px 0px 0px;
 }
 .modal-body .input-group-addon {
     border-radius: 12px 0px 0px 12px !important;
@@ -1045,6 +1045,7 @@ label {
 .modal-body .input-group {
     border: solid #ebebeb 1px;
     border-radius: 12px;
+	margin-top: 10px;
 }
 .modal-footer .input-group {
     border: solid #ebebeb 1px;
