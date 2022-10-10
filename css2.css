@@ -945,10 +945,6 @@ label {
     padding-top: 15px;
   	text-transform: uppercase;
 }
-.modal .btn {
-    border-radius: 25px;
-    cursor: pointer;
-}
 .input-group-btn .modal .btn {
     box-shadow: unset;
 }
