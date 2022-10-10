@@ -2088,18 +2088,16 @@ blockquote {
     font-weight: bold;
     padding: 10px;
     border: dashed 1px black;
-	transition: all 0.3s;
 }	
 .xbox_player .btn-secondary:hover {
 	color: black;
 	background: white;
 	border: dashed 1px white;
-	transition: all 0.3s;
 }
 .xbox_player .btn-secondary:before {
     font-family: FontAwesome;
     content: "\f060";
-	margin-right: 5px;
+    margin-right: 5px;
 }
 .xbox_profile .table {
     margin: 0;
