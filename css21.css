@@ -883,12 +883,11 @@ label {
     border: none;
     color: #749f4d;
     opacity: 1;
+	transform: scale(1);
+  	transition: all 100ms ease-out;
 }
-.btn-success:hover {
-    background: #97cb68;
-    border: none;
-    color: #547239;
-    opacity: 1;
+.btn-success:active {
+    transform: scale(0.9);
 }
 
 
@@ -957,7 +956,14 @@ label {
     color: #000000;
     background: #ffffff;
 	border: solid #ebebeb 1px;
-    transition: none;
+	transform: scale(1);
+  	transition: all 100ms ease-out;
+}
+.btn-secondary:active {
+    color: #000000;
+	border: solid #ebebeb 1px;
+    background: #ffffff;
+	transform: scale(0.9);
 }
 .btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active, .btn-secondary:disabled {
     color: #000000;
@@ -2649,6 +2655,7 @@ blockquote {
     height: 30px;
   	border-radius: 10px;
   	padding: 0px 12px;
+	user-select: none;
   	cursor: pointer;
 }
 .pd-additional:hover {
