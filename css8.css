@@ -885,9 +885,9 @@ label {
     opacity: 1;
 }
 .btn-success:hover {
-    background: #bee19f;
+    background: #cadfb7;
     border: none;
-    color: #91bd69;
+    color: #a1c383;
     opacity: 1;
 }
 
@@ -931,7 +931,7 @@ label {
 }
 .modal .modal-content {
     background: #f3f4f6;
-    border-radius: 5px 50px;
+    border-radius: 15px;
     padding: 15px;
     color: #909090;
 }
