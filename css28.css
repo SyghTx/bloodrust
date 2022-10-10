@@ -1046,6 +1046,7 @@ label {
     border: solid #ebebeb 1px;
     border-radius: 12px;
 	margin-top: 10px;
+	background: white;
 }
 .modal-footer .input-group {
     border: solid #ebebeb 1px;
