@@ -2603,6 +2603,24 @@ blockquote {
   	opacity: 0;
     transition: opacity 220ms ease-out;
 }
+.pd-item .tooltiptext1::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent rgba(0, 0, 0, 0.5) transparent transparent;
+}
+.pd-item:hover .tooltiptext1 {
+    visibility: visible;
+  	opacity: 1;
+}
+.tooltip1:hover .tooltiptext1 {
+    visibility: visible;
+  	opacity: 1;
+}
 @media (max-width: 610px)
 {
 .pd-item .tooltiptext1 {
@@ -2623,6 +2641,8 @@ blockquote {
     transition: opacity 220ms ease-out;
 }
 }
+
+
 @media (max-width: 610px)
 {
 .pd-item .tooltiptext1::after {
