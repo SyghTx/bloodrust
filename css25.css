@@ -973,7 +973,7 @@ label {
     background: #ffffff;
 	transform: scale(0.9);
 }
-.modal-footer .btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active, .btn-secondary:disabled {
+.modal-footer .btn-secondary:hover, .modal-footer .btn-secondary:focus, .modal-footer .btn-secondary:active, .modal-footer .btn-secondary:disabled {
     color: #000000;
 	border: solid #ebebeb 1px;
     background: #ffffff;
