@@ -960,20 +960,20 @@ label {
 .modal-kit .modal-content, .modal-info .modal-content {
     width: unset;
 }
-.btn-secondary {
+.modal-footer .btn-secondary {
     color: #000000;
     background: #ffffff;
 	border: solid #ebebeb 1px;
 	transform: scale(1);
   	transition: all 100ms ease-out;
 }
-.btn-secondary:active {
+.modal-footer .btn-secondary:active {
     color: #000000;
 	border: solid #ebebeb 1px;
     background: #ffffff;
 	transform: scale(0.9);
 }
-.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active, .btn-secondary:disabled {
+.modal-footer .btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active, .btn-secondary:disabled {
     color: #000000;
 	border: solid #ebebeb 1px;
     background: #ffffff;
