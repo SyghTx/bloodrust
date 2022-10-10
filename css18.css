@@ -956,6 +956,7 @@ label {
 .btn-secondary {
     color: #000000;
     background: #ffffff;
+	border: solid #ebebeb 1px;
     transition: none;
 }
 .btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active, .btn-secondary:disabled {
