@@ -884,7 +884,7 @@ label {
     color: #749f4d;
     opacity: 1;
 }
-.btn-success {
+.btn-success:hover {
     background: #bee19f;
     border: none;
     color: #91bd69;
