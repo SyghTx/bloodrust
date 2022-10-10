@@ -1598,6 +1598,7 @@ label {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+	border: solid #ebebeb 1px;
 }
 .container-oplata {
     display: -webkit-inline-box;
@@ -1617,6 +1618,7 @@ label {
 }
 .container-oplata {
   display: flex;
+  border: solid #ebebeb 1px;
 }
 .icon-user-oplata {
     width: 40px;
