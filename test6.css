@@ -1055,14 +1055,6 @@ label {
 
 /*Рулетка*/
 
-.roulette {
-    margin: -16px -16px 0;
-    position: relative;
-    white-space: nowrap;
-    overflow: hidden;
-    padding: 20px 0px 10px 0px;
-}
-
 .roulette-item {
     box-shadow: none;
     background: white;
