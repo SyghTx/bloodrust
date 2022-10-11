@@ -1061,7 +1061,6 @@ label {
     white-space: nowrap;
     overflow: hidden;
     padding: 20px 0px 10px 0px;
-    margin: 0 0px !important;
 }
 
 .roulette-item {
@@ -1069,6 +1068,7 @@ label {
     background: white;
     border-right: solid #ebebeb 1px;
     border-bottom: 0px;
+    margin: 0 0px !important;
 }
 
 .blueprint__image, .roulette-item_blueprint .roulette-item__image {
