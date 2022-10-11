@@ -1088,10 +1088,14 @@ label {
 
 .roulette-item__description {
     padding: 0 10px 10px 10px;
+    transform: skewY(358deg);
 }
 .roulette-item__description > b {
     font-size: 14px;
     font-weight: 100;
+    background: #ededed;
+    padding: 0px 10px;
+    border-radius: 3px;
 }
 .roulette-item__image{padding:0px}
 .roulette-item__image {
@@ -1099,6 +1103,7 @@ label {
     height: 240px;
     padding: 10px;
     overflow: hidden;
+    transform: skewY(358deg);
 }
 
 .roulette:before {
