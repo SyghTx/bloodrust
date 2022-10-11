@@ -1141,6 +1141,46 @@ label {
     100% { transform: translateY(0); }
 }
 
+.roulette__description {
+    margin: 10px 0px 0px 0px !important;
+}
+
+.rd-items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+}
+.rd-item {
+    display: flex;
+  	border-radius: 12px;
+    background: #ffffff;
+    border: solid #ebebeb 1px;
+    text-align: initial;
+    padding: 5px;
+}
+.rd-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+}
+.rd-text {
+    display: flex;
+    flex-direction: column;
+  	justify-content: center;
+}
+.rd-main {
+    font-size: 15px;
+    font-weight: 600;
+    color: #23272a;
+  	line-height: 15px;
+}
+.rd-subtext {
+    font-size: 13px;
+    color: #999;
+    line-height: 15px;
+}
+
 /*Описание*/
 
 .desc-service {
