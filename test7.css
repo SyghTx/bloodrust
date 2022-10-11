@@ -1055,12 +1055,20 @@ label {
 
 /*Рулетка*/
 
+.roulette {
+    margin: -16px -16px 0;
+    position: relative;
+    padding: 10px 16px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
 .roulette-item {
     box-shadow: none;
     background: white;
-    border-right: solid #ebebeb 1px;
+    border: solid #ebebeb 1px;
     border-bottom: 0px;
-    margin: 0 0px !important;
+    border-radius: 12px;
 }
 
 .blueprint__image, .roulette-item_blueprint .roulette-item__image {
