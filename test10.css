@@ -1070,6 +1070,8 @@ label {
     box-shadow: none;
     background: white;
     border-bottom: 0px;
+    border-left: solid #fff 1px;
+    border-right: solid #fff 1px;
     transition: all 0.2s ease-out;
 }
 
