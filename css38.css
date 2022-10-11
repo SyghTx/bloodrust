@@ -537,19 +537,19 @@ select.form-control:not([size]):not([multiple]) {
     animation: load 6s normal forwards;
 }
 
-.xserver:nth-child(1) .fa-play:hover {
+.xserver:hover:nth-child(1) .fa-play {
     color: #dc6048;
 }
-.xserver:nth-child(2) .fa-play:hover {
+.xserver:hover:nth-child(2) .fa-play {
     color: #70b446;
 }
-.xserver:nth-child(3) .fa-play:hover {
+.xserver:hover:nth-child(3) .fa-play {
     color: #f9be77;
 }
-.xserver:nth-child(4) .fa-play:hover {
+.xserver:hover:nth-child(4) .fa-play {
     color: #c8b3f3;
 }
-.xserver:nth-child(5) .fa-play:hover {
+.xserver:hover:nth-child(5) .fa-play {
     color: #a8d2f3;
 }
 
