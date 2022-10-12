@@ -1164,6 +1164,15 @@ label {
     height: 40px;
     margin-right: 8px;
 }
+.rd-icon-blueprints {
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+    background: url(https://i.imgur.com/tXpilqO.png);
+    background-size: 110%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
 .rd-text {
     display: flex;
     flex-direction: column;
