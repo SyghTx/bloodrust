@@ -789,22 +789,6 @@ select.form-control:not([size]):not([multiple]) {
     padding: 10px;
     border-radius: 15px;
 }
-.mb-3 .btn-success {
-    background: #ffffff;
-    color: #000;
-    opacity: 0.8;
-    border-radius: 15px;
-    border: solid 1px black !important;
-  	transition: all 0ms !important;
-}
-.mb-3 .btn-success:hover {
-    background: black;
-    color: white;
-    opacity: 0.8;
-    border-radius: 15px;
-    border: solid 1px black !important;
-  	transition: all 0ms !important;
-}
 .mb-3 .ladda-label {
   	transition: all 0ms !important;
 }
