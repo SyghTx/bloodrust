@@ -267,7 +267,7 @@ button:focus {
 .input-group-addon {
     color: hsl(0, 0%, 70%);
     background: #ffffff;
-    border-radius: 25px;
+    border-radius: 15px;
     border: unset;
 }
 .form-control, .form-control:focus {
@@ -278,7 +278,7 @@ button:focus {
 }
 .form-control {
     border: none;
-    border-radius: 25px;
+    border-radius: 15px;
 }
 .store-filters .form-control {
     padding: 13px 13px 13px 0px;
@@ -293,7 +293,7 @@ button:focus {
     content: "\F002";
     background: #cdcdcd;
     padding: 10px;
-    border-radius: 20px;
+    border-radius: 12px;
     color: white;
     margin-left: -6px;
 }
