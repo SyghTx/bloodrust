@@ -1128,6 +1128,16 @@ label {
     grid-column-gap: 5px;
     grid-row-gap: 5px;
 }
+@media (max-width: 990px) {
+.rd-items {
+    grid-template-columns: repeat(2, 1fr) !important;
+}
+}
+@media (max-width: 500px) {
+.rd-items {
+    grid-template-columns: repeat(1, 1fr) !important;
+}
+}
 .rd-item {
     display: flex;
   	border-radius: 12px;
