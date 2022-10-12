@@ -1750,6 +1750,7 @@ blockquote {
     overflow-x: hidden;
     margin-bottom: 10px;
     background: white;
+    border: solid #ebebeb 1px;
 }
 .x-spoiler blockquote {
     margin-top: 12px;
