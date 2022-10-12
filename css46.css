@@ -828,8 +828,7 @@ select.form-control:not([size]):not([multiple]) {
 }
 .table-striped .btn-block {
     display: block;
-    width: unset;
-  	border-radius: 10px;
+    border-radius: 10px;
 }
 
 .ladda-button[data-style=zoom-in], .ladda-button[data-style=zoom-in] .ladda-label, .ladda-button[data-style=zoom-in] .ladda-spinner, .ladda-button[data-style=zoom-out], .ladda-button[data-style=zoom-out] .ladda-label, .ladda-button[data-style=zoom-out] .ladda-spinner {
