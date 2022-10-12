@@ -868,6 +868,7 @@ label {
     border: none;
     color: #749f4d;
     opacity: 1;
+	border-radius: 12px;
 	transform: scale(1);
   	transition: all 100ms ease-out;
 }
