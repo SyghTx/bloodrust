@@ -1354,7 +1354,6 @@ label {
 .oplata_info {
     display: flex;
     justify-content: center;
-    margin: 15px 0;
     flex-direction: column;
 }
 .forms-oplata {
