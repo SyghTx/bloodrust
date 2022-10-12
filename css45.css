@@ -819,11 +819,12 @@ select.form-control:not([size]):not([multiple]) {
     border-radius: 15px;
 }
 .table-striped .btn-success {
-    background: #56bf85;
+    background: #a6e170;
     border: none;
-    color: #fff;
+    color: #749f4d;
     opacity: 1;
-    margin-left: 10px;
+    transform: scale(1);
+    transition: all 100ms ease-out;
 }
 .table-striped .btn-block {
     display: block;
