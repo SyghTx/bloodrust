@@ -1747,7 +1747,7 @@ blockquote {
     display: grid;
 }
 .btn-skin {
-    border-radius: 25px;
+    border-radius: 12px;
     cursor: pointer;
     color: white;
     background: #9ec483;
