@@ -629,7 +629,7 @@ function Open(el, usefade = true, zind = false) {
 	var div1 = document.createElement("div");
     div1.id = 'Modal';
 	var div2 = document.createElement("div");
-	div2.className = 'modal modal-service fade';
+	div2.className = 'modal modal-xacku fade';
 	if(!usefade) div2.classList.add("show");
 	div2.style = 'display: block; z-index: 1100;';
 	div2.id = 'closer';
