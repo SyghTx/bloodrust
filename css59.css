@@ -1140,11 +1140,12 @@ label {
 }
 .rd-item {
     display: flex;
-  	border-radius: 12px;
+    border-radius: 12px;
     background: #ffffff;
     border: solid #ebebeb 1px;
     text-align: initial;
     padding: 5px;
+    overflow: hidden;
 }
 .rd-icon {
     width: 40px;
