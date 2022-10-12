@@ -1055,13 +1055,29 @@ label {
 
 /*Рулетка*/
 
-.roulette-item{box-shadow:0 1px 12px 6px rgba(0, 0, 0, .4);border-bottom:solid 4px red}
+.roulette {
+    margin: 0px -16px 0;
+    position: relative;
+    padding: 0px 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    background: white;
+    border-top: solid #ebebeb 1px;
+    border-bottom: solid #ebebeb 1px;
+}
+
 .roulette-item {
     box-shadow: none;
-    background: transparent;
-    border: 1px solid;
-    border-color: rgba(255, 255, 255, 0.03);
-    transform: skewY(-2deg);
+    background: white;
+    border-bottom: 0px;
+    border-left: solid #fff 1px;
+    border-right: solid #fff 1px;
+    transition: all 0.2s ease-out;
+}
+
+.roulette-item:hover {
+    border-left: solid #ebebeb 1px;
+    border-right: solid #ebebeb 1px;
 }
 
 .blueprint__image, .roulette-item_blueprint .roulette-item__image {
@@ -1069,20 +1085,25 @@ label {
     background-size: cover;
     box-shadow: none;
 }
-.roulette-item__description{padding:0 15px 15px 15px}
+
+.roulette-item__description {
+    padding: 0 10px 10px 10px;
+    transform: skewY(358deg);
+}
 .roulette-item__description > b {
     font-size: 14px;
     font-weight: 100;
+    background: #ededed;
+    padding: 0px 10px;
+    border-radius: 3px;
 }
 .roulette-item__image{padding:0px}
 .roulette-item__image {
     width: 240px;
     height: 240px;
-    padding: 25px;
+    padding: 10px;
     overflow: hidden;
-    border-radius: 30px;
-    transform: scale(0.9);
-    background: linear-gradient(311deg, rgba(0,0,0,0), #ffffff);
+    transform: skewY(358deg);
 }
 
 .roulette:before {
@@ -1094,12 +1115,13 @@ label {
     content: "";
     position: absolute;
     left: 50%;
-    margin: -16px 0 0 -18px;
+    margin: -5px 0 0 -18px;
     border-left: 18px solid transparent;
     border-right: 18px solid transparent;
     align-content: center;
     animation-name: bounce-2;
     animation-timing-function: ease;
+    z-index: 5;
 }
 .modal-roulette .modal-content { 
   width:100% !important;
@@ -1118,71 +1140,45 @@ label {
     50%  { transform: translateY(-10px); }
     100% { transform: translateY(0); }
 }
-.container-3WKP9P {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    width: 200px;
-    margin-left: 10px;
-    margin-right: 10px;
-    padding-right: 10px;
-    padding-left: 10px;
-    border-radius: 12px;
-    background: #fff;
-    background: var(--white);
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    text-align: initial;
-    margin-bottom: 15px;
-    animation: zoomIn 1s;
+
+.roulette__description {
+    margin: 10px 0px 0px 0px !important;
 }
-.icon-1lW2Ee {
+
+.rd-items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+}
+.rd-item {
+    display: flex;
+  	border-radius: 12px;
+    background: #ffffff;
+    border: solid #ebebeb 1px;
+    text-align: initial;
+    padding: 5px;
+}
+.rd-icon {
     width: 40px;
     height: 40px;
-    margin-right: 16px;
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 auto;
-    flex: 0 0 auto;
+    margin-right: 8px;
 }
-.textContainer-mTPAIw {
-    -webkit-box-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    display: -webkit-box;
-    display: -ms-flexbox;
+.rd-text {
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+  	justify-content: center;
 }
-.name-3T7FKQ {
+.rd-main {
     font-size: 15px;
-    line-height: 20px;
     font-weight: 600;
     color: #23272a;
-    color: var(--not-quite-black);
+  	line-height: 15px;
 }
-.category-1AFH8P {
+.rd-subtext {
     font-size: 13px;
-    line-height: 18px;
-    color: #99aab5;
-    color: var(--greyple);
-}
-.icon-blueprints {
-    width: 40px;
-    height: 40px;
-    margin-right: 16px;
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 auto;
-    flex: 0 0 auto;
-    background: url(https://i.imgur.com/tXpilqO.png);
-    background-size: 110%;
-    background-position: center center;
-    background-repeat: no-repeat;
+    color: #999;
+    line-height: 15px;
 }
 
 /*Описание*/
