@@ -826,6 +826,7 @@ select.form-control:not([size]):not([multiple]) {
 
 .xbox_promocodes .xbox__header {
     margin-bottom: 0px;
+    display: block !important;
 }
 .xbox_promocodes .xbox__body {
     padding: 10px;
