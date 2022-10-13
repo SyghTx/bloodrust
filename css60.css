@@ -454,7 +454,6 @@ select.form-control:not([size]):not([multiple]) {
 }
 
 .fa-play {
-    animation: rotation 2.8s infinite linear;
     transition: 0.5s;
     margin-right: -11px;
     color: #e6e6e6;
@@ -823,7 +822,12 @@ select.form-control:not([size]):not([multiple]) {
 /*Промокоде*/
 
 .xbox_promocodes .xbox__header {
-    display: none;
+    margin-bottom: 0px;
+}
+.xbox_promocodes .xbox__body {
+    padding: 10px;
+    background: white;
+    border-radius: 0px 0px 15px 15px;
 }
 label {
   display: none;
@@ -840,12 +844,17 @@ label {
 }
 .xbox_promocodes .input-group {
     width: 152.5%;
+    border: solid #ebebeb 1px;
+    border-radius: 15px;
 }
 @media (max-width: 1200px)
 {
 .xbox_promocodes .input-group {
     width: 100%;
 }
+}
+.xbox_promocodes .input-group-btn:focus, .xbox_promocodes .input-group-btn:active,.xbox_promocodes .btn-success:focus, .xbox_promocodes .btn-success:active {
+  transform: scale(1) !important;
 }
 .xbox_promocodes .btn {
     border-radius: 15px;
@@ -900,6 +909,10 @@ label {
 
 /*Модал*/
 
+.service__image, .item__image, .blueprint__image {
+    display: none;
+}
+
 @media (min-width: 576px)
 {
 .modal-sm {
@@ -917,13 +930,16 @@ label {
     padding-top: 0px;
 }
 .modal .modal-body {
-    padding-bottom: 0px;
+    padding: 0 16px;
 }
 .modal-body {
     background: none;
 }
 .modal-body .form-group {
     margin-bottom: 0px;
+}
+.modal-content {
+    overflow: hidden;
 }
 .modal .modal-content {
     background: #f3f4f6;
@@ -1008,7 +1024,7 @@ label {
   	padding: 10px 25px 10px 25px;
 }
 .service__description {
-    margin: 10px 0px 0px 0px;
+    margin: 0px;
 }
 .modal-body .input-group-addon {
     border-radius: 12px 0px 0px 12px !important;
@@ -1028,6 +1044,28 @@ label {
 .modal-footer .input-group {
     border: solid #ebebeb 1px;
     border-radius: 12px;
+}
+.modal-item .modal-title, .modal-service .modal-title, .modal-blueprint .modal-title {
+    font-size: 18px !important;
+  	font-weight: bold;
+    display: block;
+    text-align: center;
+    color: #000 !important;
+    background: white;
+    width: 100%;
+    border-radius: 12px;
+    padding: 10px !important;
+    border: solid #ebebeb 1px;
+    text-transform: none !important;
+}
+.modal-item .modal-title, .modal-blueprint .modal-title {
+	margin: 16px 16px 0px 16px;
+}
+.modal-service .modal-title {
+    margin: 16px 16px 10px 16px;
+}
+.modal-footer .input-group-btn:active, .modal-footer .input-group-btn:focus {
+    transform: scale(1);
 }
 
 /*Рулетка*/
@@ -2175,34 +2213,24 @@ blockquote {
 
 
 
-.xbox_rules {
-    text-transform: uppercase;
-    text-align: center;
-    color: #cccccc;
-    border-radius: 15px;
+.some-btn-group {
+	display: flex;
+    gap: 10px;
+  	margin-bottom: 10px;
 }
-.rules {
-  font-weight: 100;
-  cursor: pointer;
-  margin-bottom: 5px;
-  padding: 5px;
-  border-radius: 0px;
+.some-btn {
   background: white;
   color: black;
-  transition:all 0.2s ease-in-out;
-  letter-spacing: 0px;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 300ms ease 0s;
 }
-.rules:first-child {
-  border-radius: 15px 15px 0px 0px;
-}
-.rules:last-child {
-  border-radius: 0px 0px 15px 15px;
-}
-.rules:hover {
-  background: black;
-  transition:all 0.2s ease-in-out;
-  color: white;
-  letter-spacing: 2px;
+.some-btn:hover {
+  box-shadow: 0px 10px 10px -8px rgba(0, 0, 0, 0.1);
+  transform: translate3d(0px, -5px, 0px);
 }
 
 
