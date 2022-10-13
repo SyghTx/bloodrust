@@ -2214,9 +2214,8 @@ blockquote {
 
 
 .some-btn-group {
-	display: flex;
-    gap: 10px;
-  	margin-bottom: 10px;
+  display: flex;
+  gap: 10px;
 }
 .some-btn {
   background: white;
