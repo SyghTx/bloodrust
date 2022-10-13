@@ -941,9 +941,6 @@ label {
 .modal-body .form-group {
     margin-bottom: 0px;
 }
-.modal-content {
-    overflow: hidden;
-}
 .modal .modal-content {
     background: #f3f4f6;
     border-radius: 15px;
