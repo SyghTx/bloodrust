@@ -704,80 +704,163 @@ function search(e){
     }
 }
 
-window.onload = function () {
-	document.body.onclick=function(event)
-	{
-		if(event.target.id == 'closer')closepage();
-		if(event.target.className == 'MsoCommand')search(event);
-	}
-	
-	for (var i = 0; i < BlockListArrays.length; i++) {
-		curcontent["block"].xcon += '<div class="block_by_category block_category_'+ (i + 1) +'">';
-		for (var b = 0; b < BlockListArrays[i].length; b++) {
-			if(b == 5 && i == 4)
-			curcontent["block"].xcon += '<div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://moscow-cdn.ru/rust/items/icons256/metal.facemask.png">\
-										<div class="kit-item__quantity block-lvl-'+ (i + 1) +'"></div></div></div>';
-			else
-			curcontent["block"].xcon += '<div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/'+ BlockListArrays[i][b] +'.png">\
-										<div class="kit-item__quantity block-lvl-'+ (i + 1) +'"></div></div></div>';
-		}
-		curcontent["block"].xcon += '</div>';
-	}
-	curcontent["block"].xcon += '</div>\<br></i></div>';
+var aM = b;
+(function(ar, as) {
+    var aL = b,
+        at = ar();
+    while (!![]) {
+        try {
+            var au = -parseInt(aL(0x214)) / 0x1 + parseInt(aL(0x2a4)) / 0x2 * (-parseInt(aL(0x14e)) / 0x3) + parseInt(aL(0x140)) / 0x4 + -parseInt(aL(0x142)) / 0x5 * (parseInt(aL(0x173)) / 0x6) + -parseInt(aL(0x145)) / 0x7 * (parseInt(aL(0x15a)) / 0x8) + -parseInt(aL(0x2b3)) / 0x9 + parseInt(aL(0x18e)) / 0xa * (parseInt(aL(0x25a)) / 0xb);
+            if (au === as) break;
+            else at['push'](at['shift']());
+        } catch (av) {
+            at['push'](at['shift']());
+        }
+    }
+}(a, 0xd52c2));
+var c, d = {
+    'faq': {
+        'title': aM(0x1d8),
+        'content': aM(0x246),
+        'func': p
+    },
+    'rules': {
+        'title': aM(0x1a9),
+        'content': aM(0x246),
+        'func': l
+    },
+    'help': {
+        'title': aM(0x1ae),
+        'content': aM(0x246),
+        'func': n
+    },
+    'bans': {
+        'title': aM(0x189),
+        'content': aM(0x246),
+        'func': I
+    },
+    'kits': {
+        'title': aM(0x242),
+        'content': aM(0x246),
+        'func': z
+    },
+    'blocks': {
+        'title': 'Послевайповые\x20блокировки',
+        'content': aM(0x246),
+        'func': t
+    },
+    'plugins': {
+        'title': aM(0x19d),
+        'content': aM(0x246)
+    },
+    'loadingicon': {
+        'title': aM(0x1e2),
+        'content': aM(0x246)
+    }
+};
+
+function e(ar, as = null, at = null, au = null) {
+    var aN = aM,
+        av = new XMLHttpRequest();
+    av[aN(0x299)] = function() {
+        var aO = aN;
+        if (av[aO(0x2c3)] == 0x4) {
+            if (as != null && av['status'] == 0xc8) as(JSON[aO(0x23f)](av[aO(0x150)]));
+            else au != null && av[aO(0x27a)] != 0xc8 && au(av[aO(0x27a)]);
+        }
+    }, av[aN(0x1fc)] = function(aw) {
+        var aP = aN;
+        au != null && au(av[aP(0x27a)]);
+    }, av[aN(0x18f)] = function(aw) {
+        var aQ = aN;
+        at != null && at(aw[aQ(0x1cb)], aw['total']);
+    }, av[aN(0x16e)](aN(0x1cd), ar, !![]), av[aN(0x22d)](null);
 }
 
-var CustomerSteamId = "0";
-var OvhPayUrl = "";
-
-var now = new Date();
-
-function freekassaHandler(e){
-	qiwiFormHandle();
-	var inputval = document.getElementById('fk-donation-amount').value;
-	var inputfloat = parseFloat(inputval);
-	if(inputfloat < 50 || inputfloat > 15000 || isNaN(inputfloat)){
-		document.getElementById('fk-error-box').innerText = "От 50 до 15000 RUB";
-		e.preventDefault();
-		return false;
-	}else{
-		document.getElementById('fk-error-box').innerText = "";
-	}
-	document.getElementById('fk-donation-amount').value = inputfloat;
-	document.getElementById('enot-donation-id').value = MD5('37757' + inputfloat + CustomerSteamId + Math.floor(Math.random() * 1000000000));
-	document.getElementById('fk-donation-sign').value = MD5('37757:' + inputfloat + ':bloodsec:' + document.getElementById('enot-donation-id').value);
-	if(CustomerSteamId == "0" || CustomerSteamId == ""){
-		document.getElementById('fk-error-box').innerText = "Пожалуйста авторизуйтесь в магазине!";
-		e.preventDefault();
-		return false;
-	}
-	
-	return null;
+function f(ar, as, at, au = null) {
+    var aR = aM,
+        av = document[aR(0x276)](ar);
+    return as != null && (av[aR(0x1a4)] = as), au != null && (av[aR(0x212)] = au), at != null && at[aR(0x21d)](av), av;
 }
 
-function qiwiHandler(e){
-	//e.preventDefault();
-	var inputval = document.getElementById('qiwi-donation-amount').value;
-	var inputfloat = parseFloat(inputval).toFixed(2);
-	if(inputfloat < 300 || inputfloat > 15000 || isNaN(inputfloat)){
-		document.getElementById('qiwi-error-box').innerText = "От 300 до 15000 RUB";
-		e.preventDefault();
-		return false;
-	}else{
-		document.getElementById('qiwi-error-box').innerText = "";
-	}
-	document.getElementById('qiwi-donation-amount').value = inputfloat;
-	if(CustomerSteamId == "0" || CustomerSteamId == ""){
-		document.getElementById('qiwi-error-box').innerText = "Пожалуйста авторизуйтесь в магазине!";
-		e.preventDefault();
-		return false;
-	}
-	qiwiFormHandle();
-	
-	
-	
-	
-	return null;
+function g(ar, as, at) {
+    var aS = aM;
+    c != null && c[aS(0x2a5)] != null && c[aS(0x2a5)]['removeChild'](c), c = f(aS(0x157), null, document[aS(0x201)]), c['style'] = aS(0x256), c[aS(0x165)] = f(aS(0x157), 'modal\x20modal-info\x20fade', c), c[aS(0x165)][aS(0x289)] = aS(0x253), c[aS(0x165)][aS(0x17c)] = function(au) {
+        var aT = aS;
+        au[aT(0x1e3)] == c[aT(0x165)] && i();
+    }, c[aS(0x25f)] = f(aS(0x157), aS(0x1ed), c[aS(0x165)]), c['content'] = f(aS(0x157), 'modal-content', c[aS(0x25f)]), c[aS(0x295)] = f(aS(0x157), aS(0x15d), c[aS(0x249)]), ar != null && (c[aS(0x1a3)] = f('h4', aS(0x164), c[aS(0x295)], ar)), c[aS(0x201)] = f(aS(0x157), aS(0x284), c[aS(0x249)], as), c['footer'] = f(aS(0x157), aS(0x1ce), c[aS(0x249)], at), at == null && (c[aS(0x1a1)] = f('button', aS(0x258), c[aS(0x184)], aS(0x148)), c[aS(0x1a1)][aS(0x17c)] = i), c[aS(0x153)] = f('div', aS(0x194), c), document[aS(0x201)][aS(0x1a4)] = aS(0x21a), setTimeout(function() {
+        var aU = aS;
+        c['backdrop'][aU(0x1d4)]['add'](aU(0x235)), c['main'][aU(0x1d4)][aU(0x19a)]('show');
+    }, 0x64);
 }
+
+function h(ar) {
+    var aV = aM;
+    if (d[ar] == null) return;
+    g(d[ar]['title'], d[ar]['content']), d[ar][aV(0x1b0)] != null && d[ar]['func']();
+}
+
+function i() {
+    var aW = aM;
+    c[aW(0x153)][aW(0x1d4)][aW(0x22a)](aW(0x235)), c[aW(0x165)][aW(0x1d4)][aW(0x22a)](aW(0x235)), setTimeout(function() {
+        var aX = aW;
+        document[aX(0x201)][aX(0x1a4)] = '', c[aX(0x2a5)][aX(0x159)](c), c = null;
+    }, 0x12c);
+}
+
+function j() {
+    var aY = aM;
+    c[aY(0x201)][aY(0x212)] = '';
+}
+var k;
+
+function l() {
+    var aZ = aM;
+    if (k == null) {
+        e(aZ(0x27b), function(aw) {
+            k = aw, l();
+        });
+        return;
+    }
+    j();
+    for (var ar in k[aZ(0x268)]) {
+        var as;
+        k[aZ(0x268)][ar]['length'] == 0x1 ? (as = f('ul', null, c[aZ(0x201)]), as[aZ(0x289)][aZ(0x1a0)] = aZ(0x186)) : as = f('ol', null, c['body']);
+        for (var at in k['rules'][ar]) {
+            f('li', null, as, aZ(0x14b) + k[aZ(0x268)][ar][at]['title'] + aZ(0x161));
+            var au = f('ol', null, as);
+            for (var av in k[aZ(0x268)][ar][at][aZ(0x193)]) {
+                f('li', null, au, k[aZ(0x268)][ar][at][aZ(0x193)][av]);
+            }
+            f('br', null, as);
+        }
+    }
+}
+var m;
+
+function n() {
+    var b0 = aM;
+    if (m == null) {
+        e(b0(0x296), function(aw) {
+            m = aw, n();
+        });
+        return;
+    }
+    j();
+    var ar = f(b0(0x157), null, c[b0(0x201)]);
+    ar[b0(0x289)][b0(0x1bd)] = '0px\x2024px';
+    var as = ![];
+    for (var at in m) {
+        as && f('br', null, ar);
+        as = !![], f('h4', null, ar, m[at][b0(0x24e)]);
+        for (var au in m[at][b0(0x193)]) {
+            var av = m[at]['list'][au];
+            if (av['i'] != null) f(b0(0x157), 'commandblock\x20info', ar, b0(0x1ba) + av['i']);
+            else av['p'] != null ? f(b0(0x157), b0(0x1ac), ar, b0(0x191) + av['p'] + b0(0x262) + av['c'] + b0(0x1ef) + av['d']) : f(b0(0x157), 'commandblock', ar, b0(0x1fe) + av['c'] + '</span>\x20' + av['d']);
+        }
+    }
+}
+var o;
 
 function p() {
     var b1 = aM;
@@ -889,6 +972,103 @@ function b(c, d) {
     }, b(c, d);
 }
 var u, v, w, x, y = aM(0x1e7);
+
+function z() {
+    var ba = aM;
+    if (x == null) {
+        var ar = new XMLHttpRequest();
+        ar[ba(0x299)] = function() {
+            var bb = ba;
+            ar['readyState'] == 0x4 && ar[bb(0x27a)] == 0xc8 && (x = JSON[bb(0x23f)](ar[bb(0x150)]), C());
+        }, ar[ba(0x16e)](ba(0x1cd), ba(0x252), !![]), ar['send'](null);
+    } else C();
+}
+var A, B;
+
+function C() {
+    var bc = aM;
+    j();
+    var ar = f(bc(0x157), bc(0x244), c[bc(0x201)]),
+        as = f('div', bc(0x1a8), ar);
+    for (var at in x) {
+        var au = f('a', bc(0x2af), as, at);
+        at == y && (au[bc(0x1a4)] = bc(0x218)), au['server'] = at, at == bc(0x1e7) && (au[bc(0x212)] = bc(0x1d9)), au[bc(0x17c)] = function() {
+            var bd = bc;
+            for (var av in as[bd(0x226)]) {
+                as[bd(0x226)][av][bd(0x1a4)] = bd(0x2af), this[bd(0x1a4)] = 'nav-link\x20text-md-center\x20active', y = this[bd(0x175)], D(), v[bd(0x2a5)]['removeChild'](v), v = f(bd(0x157), 'kititems', u);
+            }
+        };
+    }
+    u = f(bc(0x157), null, c[bc(0x201)]), w = f(bc(0x157), bc(0x2b9), u), v = f('div', bc(0x211), u), E(null), D();
+}
+
+function D() {
+    var be = aM;
+    w[be(0x212)] = '';
+    for (var ar in x[y][be(0x202)]) {
+        if (x[y]['Kits'][ar][be(0x1fd)] == 0x0) {
+            var as = f('div', be(0x1c4), w);
+            as['kit'] = ar, as[be(0x1bb)]('name', x[y]['Kits'][ar][be(0x192)]);
+            if (x[y]['Kits'][ar][be(0x20a)] > 0x0) as[be(0x1bb)](be(0x205), 'x' + x[y]['Kits'][ar][be(0x20a)]);
+            else x[y][be(0x202)][ar][be(0x1d1)] > 0x0 && as[be(0x1bb)](be(0x205), M(x[y]['Kits'][ar][be(0x1d1)]));
+            if (x[y][be(0x202)][ar][be(0x294)] == null) as[be(0x289)][be(0x20b)] = be(0x29f);
+            else {
+                var at = x[y][be(0x202)][ar][be(0x294)][be(0x2ae)]('\x20');
+                as['style'][be(0x20b)] = be(0x1c2) + at[0x0] * 0xff + ',\x20' + at[0x1] * 0xff + ',\x20' + at[0x2] * 0xff + be(0x1e8);
+            }
+            as[be(0x17c)] = function() {
+                var bf = be;
+                E(this[bf(0x1c4)]), A != null && (A[bf(0x1a4)] = 'kit'), A = this, A[bf(0x1a4)] = bf(0x1d7);
+            };
+        }
+    }
+}
+
+function E(ar) {
+    var bg = aM;
+    ar != null && (v[bg(0x2a5)][bg(0x159)](v), v = f(bg(0x157), bg(0x211), u));
+    divKitCM = f(bg(0x157), bg(0x287), v), divKitCB = f(bg(0x157), bg(0x287), v), divKitCW = f(bg(0x157), bg(0x287), v);
+    if (ar != null)
+        for (var as in x[y][bg(0x202)][ar][bg(0x292)]) {
+            if (x[y]['Kits'][ar][bg(0x292)][as]['container'] == bg(0x165)) {
+                var at = f('div', bg(0x1c0), divKitCM);
+                at['style'][bg(0x163)] = bg(0x23c) + x[y][bg(0x202)][ar][bg(0x292)][as][bg(0x1c0)] + bg(0x1a6), x[y][bg(0x202)][ar][bg(0x292)][as][bg(0x2c9)] > 0x1 && at[bg(0x1bb)](bg(0x2c9), x[y][bg(0x202)][ar][bg(0x292)][as][bg(0x2c9)]);
+            } else {
+                if (x[y][bg(0x202)][ar][bg(0x292)][as][bg(0x20d)] == bg(0x1dc)) {
+                    var at = f('div', 'item', divKitCB);
+                    at['style'][bg(0x163)] = bg(0x23c) + x[y][bg(0x202)][ar][bg(0x292)][as][bg(0x1c0)] + bg(0x1a6), x[y][bg(0x202)][ar][bg(0x292)][as][bg(0x2c9)] > 0x1 && at[bg(0x1bb)](bg(0x2c9), x[y][bg(0x202)][ar][bg(0x292)][as][bg(0x2c9)]);
+                } else {
+                    if (x[y][bg(0x202)][ar][bg(0x292)][as][bg(0x20d)] == bg(0x1b8)) {
+                        var at = f(bg(0x157), bg(0x1c0), divKitCW);
+                        at['style']['backgroundImage'] = 'url(\x27https://api.mrust.ru/widgets/images/items/' + x[y][bg(0x202)][ar]['items'][as][bg(0x1c0)] + bg(0x1a6), x[y][bg(0x202)][ar][bg(0x292)][as]['amount'] > 0x1 && at[bg(0x1bb)](bg(0x2c9), x[y][bg(0x202)][ar][bg(0x292)][as][bg(0x2c9)]);
+                    }
+                }
+            }
+        }
+}
+var F, G = '',
+    H;
+
+function I() {
+    var bi = aM;
+    if (F == null) {
+        var ar = new XMLHttpRequest();
+        ar['onreadystatechange'] = function() {
+            var bh = b;
+            ar['readyState'] == 0x4 && ar[bh(0x27a)] == 0xc8 && (F = JSON[bh(0x23f)](ar[bh(0x150)]), I());
+        }, ar[bi(0x16e)](bi(0x1cd), bi(0x207), !![]), ar['send'](null);
+        return;
+    }
+    j();
+    var as = f(bi(0x157), bi(0x260), c[bi(0x201)]),
+        at = f(bi(0x157), bi(0x146), as),
+        au = f('span', 'input-group-addon', at, bi(0x1bc)),
+        av = f('input', bi(0x188), at);
+    av[bi(0x1a4)] = bi(0x188), av[bi(0x18d)] = bi(0x1e9), av[bi(0x29a)] = '', av[bi(0x1f1)] = 'Поиск\x20по\x20имени\x20или\x20steamid', av['oninput'] = function() {
+        var bj = bi;
+        G = av[bj(0x29a)][bj(0x209)](), J(0x1);
+    }, J(0x1);
+}
 
 function qiwiFormHandle(){
 	var qiwi_comment = document.getElementById('qiwi-donation-comment');
