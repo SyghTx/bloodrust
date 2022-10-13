@@ -704,6 +704,102 @@ function search(e){
     }
 }
 
+function qiwiFormHandle(){
+	var qiwi_comment = document.getElementById('qiwi-donation-comment');
+	qiwi_comment.value = CustomerSteamId;
+	document.getElementById('qiwi-donation-account').value = CustomerSteamId;
+	document.getElementById('qiwi-inp-other').setAttribute("href", OvhPayUrl);
+	document.getElementById('qiwi-inp-other2').setAttribute("href", OvhPayUrl);
+	document.getElementById('qiwi-successUrl').value = 'https://'+window.location.hostname;
+	var b2 = document.getElementById('cent-donation-account');
+	if(b2 != null)
+	b2.value = CustomerSteamId;
+	var a3 = document.getElementById('fk-donation-comment');
+	if(a3 != null)
+	a3.value = CustomerSteamId;
+	var a4 = document.getElementById('fk-donation-account');
+	if(a4 != null)
+	a4.value = CustomerSteamId;
+}
+
+function OvhUrlOverrite(){
+	var slides = document.getElementsByClassName("nav-link");
+	for (var i = 0; i < slides.length; i++) {
+		var elelink = slides.item(i);
+		var urlelelink = elelink.getAttribute("href");
+	   if(urlelelink.startsWith('https://pay.moscow.ovh')){
+		   OvhPayUrl = urlelelink;
+		   console.log(OvhPayUrl);
+		   elelink.setAttribute("href", "javascript:;");
+		   elelink.setAttribute("onclick", "OpenOplata()");
+	   }
+	}
+}
+
+setInterval(() => {
+    OvhUrlOverrite();
+}, 1000)
+
+function obtainShopSteamId(){
+	if(CustomerSteamId != "0" && CustomerSteamId != ""){
+		return;
+	}
+	var xmlHttp = new XMLHttpRequest();
+
+        if(xmlHttp != null)
+        {
+            xmlHttp.open( "GET", "/api/index.php?modules=users&action=getData", true );
+            xmlHttp.send( null );
+        }
+		xmlHttp.onload = function(gjson) {
+			var gjson = JSON.parse(xmlHttp.response);
+          console.log(gjson);
+			var preSteam = gjson.data.steamID;
+			OvhPayUrl = "https://pay.moscow.ovh/?"+gjson.data.pay;
+			if(preSteam > 76561100000000000 || !isNaN(preSteam)){
+				CustomerSteamId = preSteam.toString();
+				//qiwiFormHandle();
+				OvhUrlOverrite();
+			}else{
+				console.log("error obtainShopSteamId! "+ gjson);
+			}
+		}
+
+}
+
+function OpenOplata(){
+	Open('Oplata');
+			qiwiFormHandle();
+	setTimeout(() => function () {
+		try{
+			qiwiFormHandle();
+		}catch(e){
+			console.log('element not found '+ e);
+		}
+	}, 3000);
+}
+
+function getCookie(name = "_id") {
+  let matches = document.cookie.match(new RegExp(
+    "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+  ));
+  return matches ? decodeURIComponent(matches[1]) : "";
+}
+
+var MD5 = function(d){result = M(V(Y(X(d),8*d.length)));return result.toLowerCase()};function M(d){for(var _,m="0123456789ABCDEF",f="",r=0;r<d.length;r++)_=d.charCodeAt(r),f+=m.charAt(_>>>4&15)+m.charAt(15&_);return f}function X(d){for(var _=Array(d.length>>2),m=0;m<_.length;m++)_[m]=0;for(m=0;m<8*d.length;m+=8)_[m>>5]|=(255&d.charCodeAt(m/8))<<m%32;return _}function V(d){for(var _="",m=0;m<32*d.length;m+=8)_+=String.fromCharCode(d[m>>5]>>>m%32&255);return _}function Y(d,_){d[_>>5]|=128<<_%32,d[14+(_+64>>>9<<4)]=_;for(var m=1732584193,f=-271733879,r=-1732584194,i=271733878,n=0;n<d.length;n+=16){var h=m,t=f,g=r,e=i;f=md5_ii(f=md5_ii(f=md5_ii(f=md5_ii(f=md5_hh(f=md5_hh(f=md5_hh(f=md5_hh(f=md5_gg(f=md5_gg(f=md5_gg(f=md5_gg(f=md5_ff(f=md5_ff(f=md5_ff(f=md5_ff(f,r=md5_ff(r,i=md5_ff(i,m=md5_ff(m,f,r,i,d[n+0],7,-680876936),f,r,d[n+1],12,-389564586),m,f,d[n+2],17,606105819),i,m,d[n+3],22,-1044525330),r=md5_ff(r,i=md5_ff(i,m=md5_ff(m,f,r,i,d[n+4],7,-176418897),f,r,d[n+5],12,1200080426),m,f,d[n+6],17,-1473231341),i,m,d[n+7],22,-45705983),r=md5_ff(r,i=md5_ff(i,m=md5_ff(m,f,r,i,d[n+8],7,1770035416),f,r,d[n+9],12,-1958414417),m,f,d[n+10],17,-42063),i,m,d[n+11],22,-1990404162),r=md5_ff(r,i=md5_ff(i,m=md5_ff(m,f,r,i,d[n+12],7,1804603682),f,r,d[n+13],12,-40341101),m,f,d[n+14],17,-1502002290),i,m,d[n+15],22,1236535329),r=md5_gg(r,i=md5_gg(i,m=md5_gg(m,f,r,i,d[n+1],5,-165796510),f,r,d[n+6],9,-1069501632),m,f,d[n+11],14,643717713),i,m,d[n+0],20,-373897302),r=md5_gg(r,i=md5_gg(i,m=md5_gg(m,f,r,i,d[n+5],5,-701558691),f,r,d[n+10],9,38016083),m,f,d[n+15],14,-660478335),i,m,d[n+4],20,-405537848),r=md5_gg(r,i=md5_gg(i,m=md5_gg(m,f,r,i,d[n+9],5,568446438),f,r,d[n+14],9,-1019803690),m,f,d[n+3],14,-187363961),i,m,d[n+8],20,1163531501),r=md5_gg(r,i=md5_gg(i,m=md5_gg(m,f,r,i,d[n+13],5,-1444681467),f,r,d[n+2],9,-51403784),m,f,d[n+7],14,1735328473),i,m,d[n+12],20,-1926607734),r=md5_hh(r,i=md5_hh(i,m=md5_hh(m,f,r,i,d[n+5],4,-378558),f,r,d[n+8],11,-2022574463),m,f,d[n+11],16,1839030562),i,m,d[n+14],23,-35309556),r=md5_hh(r,i=md5_hh(i,m=md5_hh(m,f,r,i,d[n+1],4,-1530992060),f,r,d[n+4],11,1272893353),m,f,d[n+7],16,-155497632),i,m,d[n+10],23,-1094730640),r=md5_hh(r,i=md5_hh(i,m=md5_hh(m,f,r,i,d[n+13],4,681279174),f,r,d[n+0],11,-358537222),m,f,d[n+3],16,-722521979),i,m,d[n+6],23,76029189),r=md5_hh(r,i=md5_hh(i,m=md5_hh(m,f,r,i,d[n+9],4,-640364487),f,r,d[n+12],11,-421815835),m,f,d[n+15],16,530742520),i,m,d[n+2],23,-995338651),r=md5_ii(r,i=md5_ii(i,m=md5_ii(m,f,r,i,d[n+0],6,-198630844),f,r,d[n+7],10,1126891415),m,f,d[n+14],15,-1416354905),i,m,d[n+5],21,-57434055),r=md5_ii(r,i=md5_ii(i,m=md5_ii(m,f,r,i,d[n+12],6,1700485571),f,r,d[n+3],10,-1894986606),m,f,d[n+10],15,-1051523),i,m,d[n+1],21,-2054922799),r=md5_ii(r,i=md5_ii(i,m=md5_ii(m,f,r,i,d[n+8],6,1873313359),f,r,d[n+15],10,-30611744),m,f,d[n+6],15,-1560198380),i,m,d[n+13],21,1309151649),r=md5_ii(r,i=md5_ii(i,m=md5_ii(m,f,r,i,d[n+4],6,-145523070),f,r,d[n+11],10,-1120210379),m,f,d[n+2],15,718787259),i,m,d[n+9],21,-343485551),m=safe_add(m,h),f=safe_add(f,t),r=safe_add(r,g),i=safe_add(i,e)}return Array(m,f,r,i)}function md5_cmn(d,_,m,f,r,i){return safe_add(bit_rol(safe_add(safe_add(_,d),safe_add(f,i)),r),m)}function md5_ff(d,_,m,f,r,i,n){return md5_cmn(_&m|~_&f,d,_,r,i,n)}function md5_gg(d,_,m,f,r,i,n){return md5_cmn(_&f|m&~f,d,_,r,i,n)}function md5_hh(d,_,m,f,r,i,n){return md5_cmn(_^m^f,d,_,r,i,n)}function md5_ii(d,_,m,f,r,i,n){return md5_cmn(m^(_|~f),d,_,r,i,n)}function safe_add(d,_){var m=(65535&d)+(65535&_);return(d>>16)+(_>>16)+(m>>16)<<16|65535&m}function bit_rol(d,_){return d<<_|d>>>32-_}
+
+var DOMReady = function(a,b,c){b=document,c='addEventListener';b[c]?b[c]('DOMContentLoaded',a):window.attachEvent('onload',a)}
+window.addEventListener("load",function () {
+	try{
+		obtainShopSteamId();
+	}catch(e){
+		console.log('element not found '+ e);
+	}
+});
+
+
+
+
 var aM = b;
 (function(ar, as) {
     var aL = b,
@@ -1070,95 +1166,557 @@ function I() {
     }, J(0x1);
 }
 
-function qiwiFormHandle(){
-	var qiwi_comment = document.getElementById('qiwi-donation-comment');
-	qiwi_comment.value = CustomerSteamId;
-	document.getElementById('qiwi-donation-account').value = CustomerSteamId;
-	document.getElementById('qiwi-inp-other').setAttribute("href", OvhPayUrl);
-	document.getElementById('qiwi-inp-other2').setAttribute("href", OvhPayUrl);
-	document.getElementById('qiwi-successUrl').value = 'https://'+window.location.hostname;
-	var b2 = document.getElementById('cent-donation-account');
-	if(b2 != null)
-	b2.value = CustomerSteamId;
-	var a3 = document.getElementById('fk-donation-comment');
-	if(a3 != null)
-	a3.value = CustomerSteamId;
-	var a4 = document.getElementById('fk-donation-account');
-	if(a4 != null)
-	a4.value = CustomerSteamId;
+function J(ar) {
+    var bk = aM,
+        as = ar;
+    if (ar < 0x1) as = 0x1;
+    else ar >= F['filter'](K)[bk(0x197)] && (as = Math[bk(0x21c)](F['filter'](K)[bk(0x197)] / 0xa) * 0xa + 0x1);
+    H != null && (H['parentNode'] != null && H['parentNode'][bk(0x159)](H), H = null);
+    H = f('div', bk(0x231), c[bk(0x201)]);
+    var at = f(bk(0x157), bk(0x24b), H),
+        au = f(bk(0x2b2), bk(0x2ba), at, bk(0x25e)),
+        av = f(bk(0x154), null, au),
+        aw = as + 0x9;
+    aw > F[bk(0x28e)](K)[bk(0x197)] && (aw = F[bk(0x28e)](K)[bk(0x197)]);
+    for (var ax = as - 0x1; ax < aw; ax++) {
+        var ay = '';
+        F[bk(0x28e)](K)[ax]['banip'] == 0x1 && (ay = bk(0x198));
+        var az = F[bk(0x28e)](K)[ax]['nickname'];
+        az == '' && (az = bk(0x19e)), av[bk(0x212)] = av['innerHTML'] + bk(0x15c) + F[bk(0x28e)](K)[ax][bk(0x2c0)] + '\x22>' + az + bk(0x215) + F['filter'](K)[ax][bk(0x1fb)] + bk(0x2be) + L(F[bk(0x28e)](K)[ax]['time']) + bk(0x2be) + ay + '</td>';
+    }
+    var aA = f(bk(0x157), bk(0x149), H),
+        aB = f(bk(0x157), bk(0x24c), aA),
+        aC = f('a', 'page-link', aB, bk(0x1e0));
+    aC['href'] = '#', aC[bk(0x17c)] = function() {
+        J(0x1);
+    };
+    var aD = f('a', bk(0x241), aB, bk(0x177));
+    aD[bk(0x1de)] = '#', aD['onclick'] = function() {
+        J(as - 0xa);
+    };
+    var aE = f('a', bk(0x241), aB, as + '-' + aw);
+    aE[bk(0x1de)] = '#';
+    var aF = f('a', 'page-link', aB, '&gt;');
+    aF[bk(0x1de)] = '#', aF[bk(0x17c)] = function() {
+        J(as + 0xa);
+    };
+    var aG = f('a', bk(0x241), aB, bk(0x286));
+    aG[bk(0x1de)] = '#', aG[bk(0x17c)] = function() {
+        var bl = bk;
+        J(Math[bl(0x21c)](F[bl(0x197)] / 0xa) * 0xa + 0x1);
+    };
 }
 
-function OvhUrlOverrite(){
-	var slides = document.getElementsByClassName("nav-link");
-	for (var i = 0; i < slides.length; i++) {
-		var elelink = slides.item(i);
-		var urlelelink = elelink.getAttribute("href");
-	   if(urlelelink.startsWith('https://pay.moscow.ovh')){
-		   OvhPayUrl = urlelelink;
-		   console.log(OvhPayUrl);
-		   elelink.setAttribute("href", "javascript:;");
-		   elelink.setAttribute("onclick", "OpenOplata()");
-	   }
-	}
+function K(ar) {
+    var bm = aM;
+    return ar[bm(0x216)][bm(0x209)]()[bm(0x265)](G) >= 0x0 || ar[bm(0x2c0)][bm(0x265)](G) >= 0x0;
 }
 
-setInterval(() => {
-    OvhUrlOverrite();
-}, 1000)
+function L(ar) {
+    var bn = aM,
+        as = new Date(ar * 0x3e8),
+        at = [bn(0x2b8), bn(0x182), bn(0x278), 'Апреля', bn(0x21f), bn(0x26e), bn(0x230), bn(0x269), bn(0x2c4), bn(0x1c6), bn(0x17f), bn(0x29e)],
+        au = as[bn(0x27e)](),
+        av = at[as[bn(0x20c)]()],
+        aw = as[bn(0x263)](),
+        ax = as[bn(0x29d)](),
+        ay = as[bn(0x1aa)]();
+    ay < 0xa && (ay = '0' + ay);
+    var az = as[bn(0x171)](),
+        aA = bn(0x144) + ax + ':' + ay + '\x22>' + aw + '\x20' + av + '\x20' + au + bn(0x27c);
+    return aA;
+}
 
-function obtainShopSteamId(){
-	if(CustomerSteamId != "0" && CustomerSteamId != ""){
-		return;
-	}
-	var xmlHttp = new XMLHttpRequest();
+function M(ar) {
+    var bo = aM;
+    if (ar < 0x3c) return ar + bo(0x2a7);
+    else return ar < 0xe10 ? ar / 0x3c + bo(0x1dd) : ar / 0x3c / 0x3c + 'ч';
+    return time;
+}
 
-        if(xmlHttp != null)
-        {
-            xmlHttp.open( "GET", "/api/index.php?modules=users&action=getData", true );
-            xmlHttp.send( null );
+function N() {
+    var bp = aM,
+        ar = new XMLHttpRequest();
+    ar[bp(0x299)] = function() {
+        var bq = bp;
+        if (ar[bq(0x2c3)] == 0x4 && ar[bq(0x27a)] == 0xc8) {
+            var as = JSON[bq(0x23f)](ar[bq(0x150)]);
+            if (as[bq(0x27a)] == bq(0x25b) && as['message'] == bq(0x25c)) return;
+            else {
+                if (as[bq(0x27a)] == bq(0x261)) {
+                    var at = as['data'][bq(0x1ff)],
+                        au = O(bq(0x2c0));
+                    if (au == undefined || at != au) {
+                        var av = new XMLHttpRequest();
+                        av[bq(0x299)] = function() {
+                            var br = bq;
+                            if (av[br(0x2c3)] == 0x4 && av[br(0x27a)] == 0xc8) {
+                                var aw = JSON[br(0x23f)](av[br(0x150)]);
+                                if (aw[br(0x16f)] == -0x1) alert(br(0x273));
+                                else {
+                                    if (aw[br(0x16f)] == 0x0) alert(br(0x277));
+                                    else {
+                                        var ax = new Date(new Date()[br(0x240)]() + aw['response']);
+                                        document['cookie'] = br(0x282) + at + ';\x20path=/;\x20expires=' + ax['toUTCString']();
+                                    }
+                                }
+                            }
+                        }, a0 = ![], av[bq(0x16e)](bq(0x1cd), bq(0x28d) + at, !![]), av[bq(0x22d)](null);
+                    }
+                }
+            }
         }
-		xmlHttp.onload = function(gjson) {
-			var gjson = JSON.parse(xmlHttp.response);
-          console.log(gjson);
-			var preSteam = gjson.data.steamID;
-			OvhPayUrl = "https://pay.moscow.ovh/?"+gjson.data.pay;
-			if(preSteam > 76561100000000000 || !isNaN(preSteam)){
-				CustomerSteamId = preSteam.toString();
-				//qiwiFormHandle();
-				OvhUrlOverrite();
-			}else{
-				console.log("error obtainShopSteamId! "+ gjson);
-			}
-		}
-
+    }, ar[bp(0x16e)](bp(0x1cd), document[bp(0x1be)][bp(0x18c)] + bp(0x217), !![]), ar['send'](null);
 }
 
-function OpenOplata(){
-	Open('Oplata');
-			qiwiFormHandle();
-	setTimeout(() => function () {
-		try{
-			qiwiFormHandle();
-		}catch(e){
-			console.log('element not found '+ e);
-		}
-	}, 3000);
+function O(ar) {
+    var bs = aM,
+        as = document['cookie']['match'](new RegExp(bs(0x2b4) + ar[bs(0x259)](bs(0x1e6), bs(0x19f)) + '=([^;]*)'));
+    return as ? decodeURIComponent(as[0x1]) : undefined;
+}
+var P = [aM(0x1c5), aM(0x25d), aM(0x2a9), 'Ты\x20не\x20окупишься!', aM(0x248), aM(0x297), aM(0x143), aM(0x275), aM(0x27f), 'EAC:\x20Blacklisted\x20device:\x20Bloody\x20mouse/A4Tech', 'Любой\x20каприз\x20за\x20Ваши\x20деньги!', aM(0x1ca), aM(0x1d6), aM(0x195), aM(0x243), aM(0x1b4), aM(0x168), 'Иди\x20помой\x20руки!', aM(0x28b), aM(0x16c), aM(0x13f), aM(0x204), 'Руки\x20помыл?', aM(0x141), aM(0x162), aM(0x19c), aM(0x27d), aM(0x21e), aM(0x1b2), 'Видосов\x20не\x20будет,\x20ютуберы\x20приняли...', aM(0x185), 'Можете\x20ещё\x20поиграть\x20на\x20FUNRUST', aM(0x2b0), aM(0x250), aM(0x257), aM(0x264)],
+    Q;
+
+function R() {
+    var bt = aM;
+    if (document[bt(0x201)] == null) {
+        setTimeout(R, 0x64);
+        return;
+    }
+    a5[bt(0x170)](document[bt(0x201)], a6), console[bt(0x20e)](bt(0x20f), bt(0x1c1), aq), W();
+}
+R(), window[aM(0x22f)] = function() {};
+var S, T, U = 0x0;
+
+function V() {
+    var bu = aM;
+    U++;
+    if (U == 0x4) {
+        var ar = document['getElementsByClassName'](bu(0x245));
+        ar != null && ar['length'] > 0x0 && (ar = ar[0x0]);
+        T = ar[bu(0x226)][0x0][bu(0x226)][0x0], ar[bu(0x21b)](ar[bu(0x226)][0x1], ar[bu(0x226)][0x0]), ar['childNodes'][0x0][bu(0x226)][0x0][bu(0x226)][0x0][bu(0x212)] = al(S[bu(0x158)][0x0]);
+        var as = document[bu(0x276)]('img');
+        as[bu(0x1a4)] = bu(0x290), as[bu(0x251)] = S[bu(0x158)][0x1], ar[bu(0x2a5)][bu(0x21d)](as);
+    }
 }
 
-function getCookie(name = "_id") {
-  let matches = document.cookie.match(new RegExp(
-    "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
-  ));
-  return matches ? decodeURIComponent(matches[1]) : "";
+function W() {
+    var bv = aM,
+        ar = document['getElementsByClassName'](bv(0x267));
+    if (ar != null && ar[bv(0x197)] > 0x0)
+        for (var as in ar) {
+            if (ar[as]['type'] == bv(0x155)) {
+                var at = ar[as][bv(0x226)][0x0];
+                if (at[bv(0x180)](bv(0x1de)) == bv(0x174)) ak(at, bv(0x1f8));
+                else {
+                    if (at['getAttribute'](bv(0x1de)) == bv(0x223)) ak(at, bv(0x2b7));
+                    else {
+                        if (at[bv(0x180)](bv(0x1de)) == bv(0x26c)) ak(at, bv(0x232));
+                        else {
+                            if (at[bv(0x180)](bv(0x1de)) == bv(0x178)) ak(at, bv(0x17d));
+                            else {
+                                if (at[bv(0x180)](bv(0x1de)) == bv(0x176)) ak(at, bv(0x224));
+                                else {
+                                    if (at['getAttribute']('href') == bv(0x2a3)) ak(at, bv(0x205));
+                                    else {
+                                        if (at[bv(0x180)](bv(0x1de)) == bv(0x156)) ak(at, bv(0x268));
+                                        else {
+                                            if (at[bv(0x180)](bv(0x1de)) == bv(0x179)) ak(at, 'bans');
+                                            else at[bv(0x180)](bv(0x1de)) == 'info.loading' && ak(at, bv(0x1f2));
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        } else {
+            setTimeout(W, 0x64);
+            return;
+        }
+}
+var X = {
+        'store': {
+            'getData': function(ar, as) {
+                V();
+            }
+        },
+        'users': {
+            'getData': function(ar, as) {
+                var bw = aM;
+                S = ar[bw(0x2b5)], V();
+            }
+        },
+        'monitoring': {
+            'getServers': null
+        },
+        'statistics': {
+            'getData': null,
+            'killsHistory': null
+        },
+        'news': {
+            'getNewsItems': null
+        },
+        'feedback': {
+            'getAlerts': function(ar, as) {
+                V();
+            }
+        },
+        'billing': {
+            'getPaymentSystems': function() {
+                V();
+            }
+        }
+    },
+    Y = {
+        'send': XMLHttpRequest[aM(0x28c)][aM(0x22d)]
+    };
+XMLHttpRequest['prototype']['send'] = function(ar) {
+    var bx = aM;
+    return ar != null && Z(this, ar), Y[bx(0x22d)][bx(0x2bd)](this, ar);
+};
+
+function Z(ar, as) {
+    var by = aM,
+        at = {};
+    if (as != null) {
+        as = as[by(0x2ae)]('&');
+        for (var au in as) {
+            var av = as[au]['split']('=');
+            at[av[0x0]] = av[0x1];
+        }
+    }
+    ar['onreadystatechangeOri'] = ar[by(0x299)], ar['onreadystatechange'] = function() {
+        var bz = by;
+        ar[bz(0x196)](), ar[bz(0x2c3)] == 0x4 && X[at[bz(0x1f0)]] != null && X[at[bz(0x1f0)]][at['action']] != null && X[at['modules']][at['action']](JSON[bz(0x23f)](ar[bz(0x16f)]), at);
+    };
+}
+var a0 = ![];
+
+function a1() {
+    var bA = aM;
+    if (a0) return;
+    a0 = !![];
+    var ar = document[bA(0x2a2)](bA(0x1ab));
+    ar[bA(0x212)] = bA(0x236);
+    var as = new XMLHttpRequest();
+    as[bA(0x299)] = function() {
+        var bB = bA;
+        if (as[bB(0x2c3)] == 0x4 && as[bB(0x27a)] == 0xc8) {
+            var at = JSON[bB(0x23f)](as['responseText']);
+            if (at[bB(0x27a)] == bB(0x25b) && at[bB(0x1d3)] == bB(0x25c)) ar[bB(0x212)] = bB(0x200);
+            else {
+                if (at[bB(0x27a)] == bB(0x261)) {
+                    ar[bB(0x212)] = '<span\x20class=\x22text-normal\x22><br>Проверка\x20данных!</span>';
+                    var au = at[bB(0x2b5)][bB(0x1ff)],
+                        av = new XMLHttpRequest();
+                    av[bB(0x299)] = function() {
+                        var bC = bB;
+                        if (av[bC(0x2c3)] == 0x4 && av['status'] == 0xc8) {
+                            var aw = JSON[bC(0x23f)](av['responseText']);
+                            if (aw[bC(0x25b)] != null) ar[bC(0x212)] = bC(0x1e5) + aw[bC(0x25b)] + '</span>';
+                            else aw[bC(0x172)] != null && (ar['innerHTML'] = bC(0x213) + aw[bC(0x172)] + '</span><br>Отправьте\x20эту\x20команду\x20в\x20сообщения\x20группы\x20<a\x20href=\x22https://vk.me/magicowrust\x22>MAGIC\x20RUST</a>\x20или\x20боту\x20в\x20<a\x20href=\x22tg://resolve?domain=MagicRustBot\x22>Telegram</a>.');
+                        }
+                    }, av[bB(0x16e)](bB(0x1cd), bB(0x2c8) + au, !![]), av['send'](null);
+                }
+            }
+        }
+    }, as[bA(0x16e)](bA(0x1cd), document[bA(0x1be)][bA(0x18c)] + bA(0x217), !![]), as[bA(0x22d)](null);
+}
+var a2, a3, a4, a5 = new MutationObserver(function(ar) {
+        ar['forEach'](function(as) {
+            var bD = b;
+            if (as[bD(0x1e3)] != null && as[bD(0x1e3)]['className'] == bD(0x147))
+                for (var at in as[bD(0x1e3)][bD(0x226)]) {
+                    aa(as['target'][bD(0x226)][at]);
+                } else {
+                    if (as[bD(0x1e3)] != null && (as['target'][bD(0x1a4)] == bD(0x2bb) && as[bD(0x1e3)][bD(0x2a5)][bD(0x1a4)] == bD(0x22b)) || as[bD(0x1e3)]['className'] == bD(0x22b)) {
+                        var au = as[bD(0x1e3)][bD(0x233)](bD(0x1f7));
+                        if (au != null && au[bD(0x197)] > 0x0)
+                            for (var at in au) {
+                                aa(au[at]);
+                            }
+                    } else {
+                        if (as[bD(0x1e3)] != null && as[bD(0x1e3)][bD(0x1a4)] == bD(0x219)) {
+                            var av = as['target']['getElementsByClassName'](bD(0x1fa));
+                            if (av != null && av['length'] > 0x0) {
+                                for (var aw in av) {
+                                    aj(av[aw]);
+                                }
+                                ag();
+                            }
+                        } else {
+                            if (as[bD(0x1e3)][bD(0x1a4)] == bD(0x24f) && document[bD(0x1be)][bD(0x169)] == bD(0x167)) {
+                                a0 = ![];
+                                var ax = as[bD(0x1e3)][bD(0x233)](bD(0x260))[0x0];
+                                ax['parentNode'][bD(0x159)](ax);
+                                var ay = as[bD(0x1e3)][bD(0x233)]('ml-auto')[0x0];
+                                ay[bD(0x212)] = '';
+                                var az = document[bD(0x276)](bD(0x155));
+                                az[bD(0x1a4)] = bD(0x1f3), az[bD(0x212)] = bD(0x208), az[bD(0x17c)] = function() {
+                                    a1();
+                                }, ay[bD(0x21d)](az);
+                            } else {
+                                if (as[bD(0x1e3)][bD(0x1a4)] == bD(0x2bf) && window[bD(0x1c9)][document['location'][bD(0x169)]] != null) {
+                                    a2 = as[bD(0x1e3)][bD(0x233)](bD(0x2a1))[0x0], a2['className'] = bD(0x1a5);
+                                    var aA = as['target'][bD(0x233)](bD(0x2b1))[0x0];
+                                    a2[bD(0x22c)] = aA[bD(0x2a5)], a2['modalBody'][bD(0x159)](aA);
+                                    var ay = as[bD(0x1e3)][bD(0x233)]('input-group-btn')[0x0];
+                                    ay[bD(0x212)] = '', a2[bD(0x247)] = document['createElement'](bD(0x155)), a2['btn'][bD(0x1a4)] = bD(0x1f3), a2[bD(0x247)][bD(0x212)] = bD(0x29b), a2[bD(0x247)]['onclick'] = function() {
+                                        var bE = bD;
+                                        a7(document[bE(0x1be)][bE(0x169)]);
+                                    }, ay[bD(0x21d)](a2[bD(0x247)]);
+                                } else {
+                                    if (as['target'][bD(0x1a4)] == bD(0x24f) && window[bD(0x15b)][document[bD(0x1be)]['pathname']] != null) {
+                                        var aB = as[bD(0x1e3)]['getElementsByClassName'](bD(0x22e))[0x0];
+                                        aB['className'] = bD(0x181);
+                                        var aC = as[bD(0x1e3)][bD(0x233)](bD(0x188))[0x0],
+                                            az = as[bD(0x1e3)][bD(0x233)](bD(0x1f3))[0x0];
+                                        az[bD(0x226)][0x0][bD(0x212)] = bD(0x17a) + aC[bD(0x29a)] + '\x20RUB';
+                                        var aD = as[bD(0x1e3)]['getElementsByClassName'](bD(0x260))[0x0];
+                                        if (window[bD(0x15b)][document[bD(0x1be)]['pathname']][bD(0x24d)] != null) {
+                                            var aE = as[bD(0x1e3)]['getElementsByClassName'](bD(0x1ce))[0x0],
+                                                aF = aE[bD(0x233)](bD(0x28a))[0x0];
+                                            aF[bD(0x212)] = '', a3 = f(bD(0x155), bD(0x1f3), aF, bD(0x1ee) + aC[bD(0x29a)] + '\x20RUB</span>'), a3[bD(0x17c)] = function() {
+                                                var bF = bD;
+                                                if (a3[bF(0x1f9)]) return;
+                                                a3[bF(0x1f9)] = !![], a4[bF(0x1f9)] = !![];
+                                                var aJ = new XMLHttpRequest();
+                                                aJ[bF(0x299)] = function() {
+                                                    var bG = bF;
+                                                    if (aJ[bG(0x2c3)] == 0x4 && aJ[bG(0x27a)] == 0xc8) {
+                                                        var aK = JSON[bG(0x23f)](aJ[bG(0x150)]);
+                                                        if (aK[bG(0x27a)] == bG(0x25b)) an(aK[bG(0x1d3)], 0x5, !![]);
+                                                        else aK[bG(0x27a)] == 'success' && (ab(aK['data']), a3[bG(0x18b)] == a3[bG(0x2c6)] ? an(bG(0x187), 0x5) : an(bG(0x15e), 0x5), a3['disabled'] = null, a4['disabled'] = null);
+                                                    }
+                                                }, aJ[bF(0x16e)](bF(0x1cd), document[bF(0x1be)][bF(0x18c)] + bF(0x26d) + a3[bF(0x18b)] + bF(0x1bf), !![]), aJ[bF(0x22d)](null);
+                                            }, aE[bD(0x21b)](aD, aE[bD(0x272)]), aD[bD(0x212)] = '';
+                                            var aG = f(bD(0x157), bD(0x146), aD, bD(0x14f));
+                                            a4 = f(bD(0x1eb), bD(0x188), aG);
+                                            for (var aH in window[bD(0x15b)][document[bD(0x1be)][bD(0x169)]][bD(0x24d)]) {
+                                                var aI = f(bD(0x190), null, a4, aH);
+                                                aI[bD(0x29a)] = window[bD(0x15b)][document[bD(0x1be)][bD(0x169)]][bD(0x24d)][aH];
+                                            }
+                                            a4[bD(0x225)] = function() {
+                                                var bH = bD;
+                                                a3['productID'] = this[bH(0x29a)];
+                                            }, a3[bD(0x2c6)] = window['services'][document[bD(0x1be)][bD(0x169)]][bD(0x24d)][bD(0x14c)], a3[bD(0x18b)] = a3[bD(0x2c6)], a4[bD(0x29a)] = a3['mainProductID'];
+                                        } else aD[bD(0x2a5)][bD(0x159)](aD);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+        });
+    }),
+    a6 = {
+        'attributes': !![],
+        'childList': !![],
+        'subtree': !![],
+        'characterData': !![]
+    };
+
+function a7(ar) {
+    var bI = aM,
+        as = ar[bI(0x259)](bI(0x17b), '');
+    a2[bI(0x1a2)] = document[bI(0x276)](bI(0x157)), a2[bI(0x1a2)][bI(0x1a4)] = bI(0x1af), a2[bI(0x21b)](a2[bI(0x1a2)], a2[bI(0x22c)]), a2[bI(0x152)] = document[bI(0x276)]('div'), a2[bI(0x152)]['className'] = 'roulette-block', a2[bI(0x152)][bI(0x212)] = bI(0x1b1), a2[bI(0x1a2)][bI(0x21d)](a2['roulBlock']), a2['modalBody'][bI(0x1a4)] = bI(0x19b), setTimeout(function() {
+        var bJ = bI;
+        a2[bJ(0x152)][bJ(0x289)][bJ(0x160)] = bJ(0x1e4);
+    }, 0xa);
+    var at = new XMLHttpRequest();
+    at[bI(0x299)] = function() {
+        var bK = bI;
+        if (at[bK(0x2c3)] == 0x4 && at[bK(0x27a)] == 0xc8) {
+            var au = JSON[bK(0x23f)](at[bK(0x150)]);
+            if (au[bK(0x27a)] == bK(0x25b)) a2['roulBlock'][bK(0x212)] = bK(0x285) + au[bK(0x1d3)] + bK(0x1a7), a2['btn'][bK(0x17c)] = null, setTimeout(a9, 0x7d0);
+            else au[bK(0x27a)] == 'success' && (a2['roulBlock'][bK(0x212)] = '', ab(au[bK(0x2b5)]), a8(ar, au[bK(0x2b5)][0x2], au[bK(0x2b5)][0x3]));
+        }
+    }, at[bI(0x16e)](bI(0x1cd), document['location'][bI(0x18c)] + bI(0x26d) + as + '&type=4', !![]), at[bI(0x22d)](null);
 }
 
-var MD5 = function(d){result = M(V(Y(X(d),8*d.length)));return result.toLowerCase()};function M(d){for(var _,m="0123456789ABCDEF",f="",r=0;r<d.length;r++)_=d.charCodeAt(r),f+=m.charAt(_>>>4&15)+m.charAt(15&_);return f}function X(d){for(var _=Array(d.length>>2),m=0;m<_.length;m++)_[m]=0;for(m=0;m<8*d.length;m+=8)_[m>>5]|=(255&d.charCodeAt(m/8))<<m%32;return _}function V(d){for(var _="",m=0;m<32*d.length;m+=8)_+=String.fromCharCode(d[m>>5]>>>m%32&255);return _}function Y(d,_){d[_>>5]|=128<<_%32,d[14+(_+64>>>9<<4)]=_;for(var m=1732584193,f=-271733879,r=-1732584194,i=271733878,n=0;n<d.length;n+=16){var h=m,t=f,g=r,e=i;f=md5_ii(f=md5_ii(f=md5_ii(f=md5_ii(f=md5_hh(f=md5_hh(f=md5_hh(f=md5_hh(f=md5_gg(f=md5_gg(f=md5_gg(f=md5_gg(f=md5_ff(f=md5_ff(f=md5_ff(f=md5_ff(f,r=md5_ff(r,i=md5_ff(i,m=md5_ff(m,f,r,i,d[n+0],7,-680876936),f,r,d[n+1],12,-389564586),m,f,d[n+2],17,606105819),i,m,d[n+3],22,-1044525330),r=md5_ff(r,i=md5_ff(i,m=md5_ff(m,f,r,i,d[n+4],7,-176418897),f,r,d[n+5],12,1200080426),m,f,d[n+6],17,-1473231341),i,m,d[n+7],22,-45705983),r=md5_ff(r,i=md5_ff(i,m=md5_ff(m,f,r,i,d[n+8],7,1770035416),f,r,d[n+9],12,-1958414417),m,f,d[n+10],17,-42063),i,m,d[n+11],22,-1990404162),r=md5_ff(r,i=md5_ff(i,m=md5_ff(m,f,r,i,d[n+12],7,1804603682),f,r,d[n+13],12,-40341101),m,f,d[n+14],17,-1502002290),i,m,d[n+15],22,1236535329),r=md5_gg(r,i=md5_gg(i,m=md5_gg(m,f,r,i,d[n+1],5,-165796510),f,r,d[n+6],9,-1069501632),m,f,d[n+11],14,643717713),i,m,d[n+0],20,-373897302),r=md5_gg(r,i=md5_gg(i,m=md5_gg(m,f,r,i,d[n+5],5,-701558691),f,r,d[n+10],9,38016083),m,f,d[n+15],14,-660478335),i,m,d[n+4],20,-405537848),r=md5_gg(r,i=md5_gg(i,m=md5_gg(m,f,r,i,d[n+9],5,568446438),f,r,d[n+14],9,-1019803690),m,f,d[n+3],14,-187363961),i,m,d[n+8],20,1163531501),r=md5_gg(r,i=md5_gg(i,m=md5_gg(m,f,r,i,d[n+13],5,-1444681467),f,r,d[n+2],9,-51403784),m,f,d[n+7],14,1735328473),i,m,d[n+12],20,-1926607734),r=md5_hh(r,i=md5_hh(i,m=md5_hh(m,f,r,i,d[n+5],4,-378558),f,r,d[n+8],11,-2022574463),m,f,d[n+11],16,1839030562),i,m,d[n+14],23,-35309556),r=md5_hh(r,i=md5_hh(i,m=md5_hh(m,f,r,i,d[n+1],4,-1530992060),f,r,d[n+4],11,1272893353),m,f,d[n+7],16,-155497632),i,m,d[n+10],23,-1094730640),r=md5_hh(r,i=md5_hh(i,m=md5_hh(m,f,r,i,d[n+13],4,681279174),f,r,d[n+0],11,-358537222),m,f,d[n+3],16,-722521979),i,m,d[n+6],23,76029189),r=md5_hh(r,i=md5_hh(i,m=md5_hh(m,f,r,i,d[n+9],4,-640364487),f,r,d[n+12],11,-421815835),m,f,d[n+15],16,530742520),i,m,d[n+2],23,-995338651),r=md5_ii(r,i=md5_ii(i,m=md5_ii(m,f,r,i,d[n+0],6,-198630844),f,r,d[n+7],10,1126891415),m,f,d[n+14],15,-1416354905),i,m,d[n+5],21,-57434055),r=md5_ii(r,i=md5_ii(i,m=md5_ii(m,f,r,i,d[n+12],6,1700485571),f,r,d[n+3],10,-1894986606),m,f,d[n+10],15,-1051523),i,m,d[n+1],21,-2054922799),r=md5_ii(r,i=md5_ii(i,m=md5_ii(m,f,r,i,d[n+8],6,1873313359),f,r,d[n+15],10,-30611744),m,f,d[n+6],15,-1560198380),i,m,d[n+13],21,1309151649),r=md5_ii(r,i=md5_ii(i,m=md5_ii(m,f,r,i,d[n+4],6,-145523070),f,r,d[n+11],10,-1120210379),m,f,d[n+2],15,718787259),i,m,d[n+9],21,-343485551),m=safe_add(m,h),f=safe_add(f,t),r=safe_add(r,g),i=safe_add(i,e)}return Array(m,f,r,i)}function md5_cmn(d,_,m,f,r,i){return safe_add(bit_rol(safe_add(safe_add(_,d),safe_add(f,i)),r),m)}function md5_ff(d,_,m,f,r,i,n){return md5_cmn(_&m|~_&f,d,_,r,i,n)}function md5_gg(d,_,m,f,r,i,n){return md5_cmn(_&f|m&~f,d,_,r,i,n)}function md5_hh(d,_,m,f,r,i,n){return md5_cmn(_^m^f,d,_,r,i,n)}function md5_ii(d,_,m,f,r,i,n){return md5_cmn(m^(_|~f),d,_,r,i,n)}function safe_add(d,_){var m=(65535&d)+(65535&_);return(d>>16)+(_>>16)+(m>>16)<<16|65535&m}function bit_rol(d,_){return d<<_|d>>>32-_}
+function a8(ar, as, at) {
+    var bL = aM;
+    a2[bL(0x152)][bL(0x1a4)] = 'roulette-block\x20line', a2[bL(0x2c2)] = document['createElement']('div'), a2[bL(0x2c2)][bL(0x1a4)] = bL(0x199), a2[bL(0x2c2)][bL(0x289)][bL(0x1e1)] = bL(0x2ac), a2['roulBlock'][bL(0x21d)](a2[bL(0x2c2)]);
+    for (var au = 0x0; au < 0x32; au++) {
+        var av = document[bL(0x276)](bL(0x157)),
+            aw = Math[bL(0x21c)](window[bL(0x1c9)][ar][bL(0x292)][bL(0x197)] * Math[bL(0x2bc)]()),
+            ax = window['items'][window[bL(0x1c9)][ar][bL(0x292)][aw]];
+        av['className'] = bL(0x26b), av[bL(0x212)] = bL(0x1b7) + ax[bL(0x2b6)] + '\x22>', au == 0x2e && (av[bL(0x212)] = bL(0x1b7) + window[bL(0x292)][as][bL(0x2b6)] + '\x22>'), a2['train'][bL(0x21d)](av);
+    }
+    setTimeout(function() {
+        var bM = bL;
+        a2['train'][bM(0x289)][bM(0x1e1)] = '-13950px';
+    }, 0x64), setTimeout(function() {
+        var bN = bL;
+        a2['droppedItem'] = document[bN(0x276)](bN(0x157)), a2['droppedItem'][bN(0x1a4)] = 'droppedItem';
+        var ay = window['items'][as]['title'];
+        at > 0x1 && (ay = window['items'][as][bN(0x24e)] + '\x20x' + at), a2[bN(0x1c7)][bN(0x212)] = bN(0x1b7) + window[bN(0x292)][as][bN(0x2b6)] + bN(0x1b6) + ay + bN(0x1a7), a2[bN(0x1a2)][bN(0x21d)](a2[bN(0x1c7)]), a2[bN(0x2c2)][bN(0x289)][bN(0x14a)] = 0x0, a2[bN(0x1a2)][bN(0x17c)] = function() {
+            var bO = bN;
+            a2[bO(0x1c7)][bO(0x289)][bO(0x14a)] = 0x0, a9();
+        };
+    }, 0x2904);
+}
 
-var DOMReady = function(a,b,c){b=document,c='addEventListener';b[c]?b[c]('DOMContentLoaded',a):window.attachEvent('onload',a)}
-window.addEventListener("load",function () {
-	try{
-		obtainShopSteamId();
-	}catch(e){
-		console.log('element not found '+ e);
-	}
-});
+function a9() {
+    var bP = aM;
+    a2[bP(0x152)][bP(0x289)][bP(0x160)] = '0px', a2['modalBody'][bP(0x1a4)] = bP(0x284), setTimeout(function() {
+        var bQ = bP;
+        a2['removeChild'](a2[bQ(0x1a2)]);
+    }, 0x1f4);
+}
+
+function aa(ar) {
+    var bR = aM;
+    if (typeof ar != bR(0x2a6)) return;
+    var as = ar[bR(0x1b5)](bR(0x1ad));
+    if (as == null) {
+        var at = document[bR(0x276)](bR(0x157));
+        at[bR(0x1a4)] = bR(0x1f5), at[bR(0x212)] = bR(0x1d2), ar[bR(0x226)][0x0][bR(0x21b)](at, ar[bR(0x226)][0x0][bR(0x226)][0x0]);
+        var au = ar[bR(0x1b5)](bR(0x18a));
+        au != null && ar[bR(0x226)][0x0]['removeChild'](au);
+        return;
+    }
+    var av = ar[bR(0x1b5)](bR(0x1f6));
+    av != null && (av[bR(0x212)] = av[bR(0x212)][bR(0x259)](bR(0x239), ''));
+}
+
+function ab(ar) {
+    var bS = aM;
+    T != null && T[bS(0x226)][0x1] != null && T['childNodes'][0x1][bS(0x1b3)] == 0x3 && (T[bS(0x226)][0x1][bS(0x1d0)] = ar[0x0] + ar[0x1] + bS(0x228));
+}
+var ac = {},
+    ad = null,
+    ae = null,
+    af = ![];
+
+function ag() {
+    if (af) {
+        ai(ae);
+        return;
+    }
+    af = !![], ah();
+}
+
+function ah() {
+    var bT = aM,
+        ar = new XMLHttpRequest();
+    ar[bT(0x299)] = function() {
+        var bU = bT;
+        ar['readyState'] == 0x4 && ar['status'] == 0xc8 && (ae = JSON[bU(0x23f)](ar['responseText']), ai(ae));
+    }, ar[bT(0x16e)](bT(0x1cd), bT(0x270), !![]), ar[bT(0x22d)](null), setTimeout(ah, 0x7530);
+}
+
+function ai(ar) {
+    var bV = aM,
+        as = 0x0,
+        at = 0x0,
+        au = 0x0,
+        av = 0x0;
+    for (var aw in ar) {
+        if (ac[aw] == null) continue;
+        if (ar[aw]['lastupdate'] > 0x32) ac[aw][bV(0x226)][0x2][bV(0x226)][0x0][bV(0x289)][bV(0x2c5)] = bV(0x1ec), ac[aw][bV(0x226)][0x2][bV(0x226)][0x0][bV(0x15f)](bV(0x203)), ac[aw][bV(0x226)][0x2][bV(0x226)][0x0][bV(0x15f)](bV(0x221)), ac[aw]['childNodes'][0x2][bV(0x226)][0x0][bV(0x15f)](bV(0x274)), ac[aw][bV(0x226)][0x2]['childNodes'][0x0][bV(0x15f)](bV(0x254));
+        else {
+            as += Number(ar[aw][bV(0x17e)]), at += Number(ar[aw][bV(0x221)]), au += Number(ar[aw][bV(0x274)]), av += Number(ar[aw]['queue']);
+            var ax = Number(ar[aw]['players']) + Number(ar[aw][bV(0x274)]) + Number(ar[aw]['queue']);
+            ax > ar[aw]['maxplayers'] && (ax = ar[aw][bV(0x221)]);
+            var ay = ax / ar[aw]['maxplayers'] * 0x64,
+                az = ar[aw]['players'] / ax * 0x64,
+                aA = az + ar[aw]['joining'] / ax * 0x64,
+                aB = aA + ar[aw]['queue'] / ax * 0x64;
+            ac[aw][bV(0x226)][0x2][bV(0x226)][0x0][bV(0x289)]['cssText'] = bV(0x206) + az / aB * 0x64 + bV(0x2ad) + aA / aB * 0x64 + '%;\x20--queued-players:\x20' + aB / aB * 0x64 + bV(0x23b) + ay + '%;', ac[aw]['childNodes'][0x2]['childNodes'][0x0][bV(0x1bb)](bV(0x203), ar[aw][bV(0x17e)]), ac[aw][bV(0x226)][0x2]['childNodes'][0x0][bV(0x1bb)]('maxplayers', ar[aw][bV(0x221)]), ac[aw][bV(0x226)][0x2][bV(0x226)][0x0][bV(0x1bb)](bV(0x274), ar[aw][bV(0x274)]), ar[aw][bV(0x1f4)] > 0x0 ? ac[aw][bV(0x226)][0x2]['childNodes'][0x0][bV(0x1bb)](bV(0x254), ar[aw][bV(0x1f4)]) : ac[aw][bV(0x226)][0x2][bV(0x226)][0x0][bV(0x15f)](bV(0x254));
+        }
+    }
+    var ax = as + au + av;
+    ax > at && (ax = at);
+    var ay = ax / at * 0x64,
+        az = as / ax * 0x64,
+        aA = az + au / ax * 0x64,
+        aB = aA + av / ax * 0x64;
+    ad[bV(0x226)][0x1][bV(0x226)][0x0][bV(0x289)]['cssText'] = '--online-players:\x20' + az / aB * 0x64 + '%;\x20--joining-players:\x20' + aA / aB * 0x64 + bV(0x266) + aB / aB * 0x64 + '%;\x20background-size:\x20' + ay + '%;', ad[bV(0x226)][0x1][bV(0x226)][0x0]['setAttribute']('online', as), ad['childNodes'][0x1][bV(0x226)][0x0][bV(0x1bb)](bV(0x221), at), ad[bV(0x226)][0x1][bV(0x226)][0x0][bV(0x1bb)](bV(0x274), au), av > 0x0 ? ad[bV(0x226)][0x1][bV(0x226)][0x0][bV(0x1bb)](bV(0x254), av) : ad[bV(0x226)][0x1][bV(0x226)][0x0]['removeAttribute'](bV(0x254));
+}
+
+function aj(ar) {
+    var bW = aM;
+    if (typeof ar != bW(0x2a6)) return;
+    var as = ar[bW(0x1b5)](bW(0x280));
+    if (as != null) {
+        var at = as[bW(0x226)][as[bW(0x226)]['length'] - 0x1];
+        at[bW(0x212)] == bW(0x220) && (at[bW(0x1a4)] = bW(0x151), ar[bW(0x21b)](at, ar['childNodes'][0x0]), at[bW(0x212)] = '<i\x20class=\x22fa\x20fa-play-circle\x22></i>');
+        var au = at[bW(0x1de)][bW(0x259)](bW(0x166), '');
+        ac[au] = ar;
+    } else ad = ar;
+}
+
+function ak(ar, as) {
+    var bX = aM;
+    if (typeof ar != bX(0x2a6)) return;
+    ar[bX(0x15f)](bX(0x1de)), ar[bX(0x15f)](bX(0x1e3)), ar[bX(0x229)] = as, ar[bX(0x17c)] = function() {
+        return h(as), ![];
+    };
+}
+
+function al(ar) {
+    var bY = aM;
+    return decodeURIComponent(atob(ar)[bY(0x2ae)]('')[bY(0x1d5)](function(as) {
+        var bZ = bY;
+        return '%' + ('00' + as[bZ(0x293)](0x0)[bZ(0x1c3)](0x10))[bZ(0x222)](-0x2);
+    })[bY(0x1cf)](''));
+}
+var am;
+
+function an(ar, as = 0x0, at = ![]) {
+    var c0 = aM;
+    am == null && (am = document[c0(0x233)](c0(0x29c))[0x0]);
+    var au = f(c0(0x157), c0(0x23d), am, c0(0x23e) + ar + c0(0x1a7));
+    at ? au[c0(0x1d4)][c0(0x19a)](c0(0x255)) : au[c0(0x1d4)][c0(0x19a)](c0(0x227));
+    var av = f(c0(0x288), 's-alert-close', au);
+    return av[c0(0x17c)] = function() {
+        var c1 = c0;
+        this[c1(0x2a5)][c1(0x22a)]();
+    }, am[c0(0x21d)](au), au[c0(0x22a)] = function() {
+        var c2 = c0;
+        this[c2(0x1d4)][c2(0x22a)](c2(0x291)), this['classList']['add'](c2(0x1db)), setTimeout(function(aw) {
+            var c3 = c2;
+            aw != null && aw[c3(0x2a5)] == am && am[c3(0x159)](aw);
+        }, 0xfa, this);
+    }, as > 0x0 && setTimeout(function(aw) {
+        var c4 = c0;
+        aw[c4(0x22a)]();
+    }, as * 0x3e8, au), au;
+}
+class ao extends HTMLElement {
+    [aM(0x183)]() {
+        var c5 = aM;
+        this[c5(0x26f)] = {};
+        for (var ar = 0x0; ar < this[c5(0x2a5)][c5(0x1c8)]['length']; ar++) {
+            this['parentNode'][c5(0x1c8)][ar]['id'] != null && this[c5(0x2a5)][c5(0x1c8)][ar]['id'] != '' && (this['tabs'][this[c5(0x2a5)][c5(0x1c8)][ar]['id']] = this['parentNode']['children'][ar]);
+        }
+        for (var as = 0x0; as < this['children'][c5(0x197)]; as++) {
+            this[c5(0x1c8)][as]['onclick'] = function() {
+                var c6 = c5;
+                for (var at = 0x0; at < this[c6(0x2a5)]['children']['length']; at++) {
+                    this[c6(0x2a5)][c6(0x1c8)][at]['classList']['remove'](c6(0x2ca));
+                }
+                this[c6(0x1d4)]['add'](c6(0x2ca));
+                for (var au in this[c6(0x2a5)][c6(0x26f)]) {
+                    this['parentNode'][c6(0x26f)][au][c6(0x1d4)][c6(0x22a)](c6(0x2ca));
+                }
+                this[c6(0x2a5)][c6(0x26f)][this[c6(0x180)](c6(0x1e3))][c6(0x1d4)]['add'](c6(0x2ca));
+            };
+        }
+    }
+}
+customElements[aM(0x16b)]('nav-tab', ao);
+class ap extends HTMLElement {
+    [aM(0x183)]() {
+        var c7 = aM;
+        this[c7(0x17c)] = function() {
+            var c8 = c7;
+            r(this[c8(0x180)]('cat'), this[c8(0x180)](c8(0x281)));
+        };
+    }
+}
+customElements[aM(0x16b)](aM(0x210), ap);
+var aq = aM(0x237);
