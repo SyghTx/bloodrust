@@ -39,10 +39,6 @@ button, input, optgroup, select, textarea {
 .nav-pills [href="/profile/bonuses"] {display: none;}
 .col-lg-8 .xbox .xbox__header {display: none;}
 
-.xbox_server .xbox__header, .xbox_player .xbox__header {
-    display: block !important;
-}
-
 .xbox__body {
     color: black;
 }
@@ -678,6 +674,52 @@ select.form-control:not([size]):not([multiple]) {
 }
 .server-address .form-control {
     padding: 13px 13px 13px 20px;
+}
+
+.server-navigation {
+ 	display: none; 
+}
+
+.xbox_server .xbox__body {	
+	background: white;
+    padding: 20px;
+    border-radius: 15px;
+}
+.xbox_server .xbox__header {
+    margin-bottom: 0px;
+}
+.xbox_server .input-group {
+    border: solid #ebebeb 1px;
+    border-radius: 15px;
+}
+.xbox_server .input-group-btn {
+    padding: 5px;
+}
+
+.sd-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+.sd-item {
+    background: white;
+    border: solid #ebebeb 1px;
+    border-radius: 15px;
+    padding: 10px;
+  	text-align: start;
+}
+.sd-text {
+    font-size: 18px;
+    line-height: 15px;
+  	margin-bottom: 5px;
+    font-weight: 600;
+    color: #23272a;
+}
+.sd-subtext {
+    font-size: 14px;
+    line-height: 15px;
+    color: #bbb;
 }
 
 /*Header*/
@@ -2006,9 +2048,7 @@ blockquote {
 /*Jopa*/
 
 .server-address .input-group-btn:not(:first-child)>.btn {
-    color: #ffffff;
-    border-radius: 0px 15px 15px 0px;
-	background: #56BF85;
+    border-radius: 12px !important;
 }
 .server-map__image {
     background: #ffffff;
@@ -2523,11 +2563,8 @@ blockquote {
 
 
 .server-description {
-    background: white;
-    padding: 20px;
-    text-align: center;
-	color: black;
-    border-radius: 15px;
+    padding: 0px !important;
+  	text-align: start !important;
 }
 
 @media (max-width: 994px)
