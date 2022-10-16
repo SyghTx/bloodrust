@@ -2049,6 +2049,7 @@ blockquote {
 
 .server-address .input-group-btn:not(:first-child)>.btn {
     border-radius: 12px !important;
+    background: #b3b3b3;
 }
 .server-map__image {
     background: #ffffff;
