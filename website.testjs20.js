@@ -624,7 +624,7 @@ curcontent["block"] = {
 
 curcontent["block2"] = {
 	xhead: 'Блокировка предметов после вайпа', 
-	xcon: '<div class="wb-body"> <div class="wb-items"> <span class="wb-title">Оружие</span> <div class="wb-item"> <img src="https://api.mrust.ru/widgets/images/items/crossbow.png"> <span>1ч</span> </div> <span class="wb-title">Взрывчатка</span> <div class="wb-item"> <img src="https://api.mrust.ru/widgets/images/items/crossbow.png"> <span>1ч</span> </div> <span class="wb-title">Патроны</span> <div class="wb-item"> <img src="https://api.mrust.ru/widgets/images/items/crossbow.png"> <span>1ч</span> </div> <span class="wb-title">Одежда</span> <div class="wb-item"> <img src="https://api.mrust.ru/widgets/images/items/crossbow.png"> <span>1ч</span> </div> </div> </div>'
+	xcon: '<div class="wb-body"> <div class="wb-items"> <div class="wb-title">Оружие</div> <div class="wb-item"> <img src="https://api.mrust.ru/widgets/images/items/crossbow.png"> <p class="wb-time">1ч</p> </div> <div class="wb-title">Взрывчатка</div> <div class="wb-item"> <img src="https://api.mrust.ru/widgets/images/items/crossbow.png"> <p class="wb-time">1ч</p> </div> <div class="wb-title">Патроны</div> <div class="wb-item"> <img src="https://api.mrust.ru/widgets/images/items/crossbow.png"> <p class="wb-time">1ч</p> </div> <div class="wb-title">Одежда</div> <div class="wb-item"> <img src="https://api.mrust.ru/widgets/images/items/crossbow.png"> <p class="wb-time">1ч</p> </div> </div> </div>'
 };
 
 function Open(el, usefade = true, zind = false) {
