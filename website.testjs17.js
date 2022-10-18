@@ -622,6 +622,12 @@ curcontent["block"] = {
 	
 };
 
+curcontent["block2"] = {
+	xhead: 'Блокировка предметов после вайпа', 
+	xcon: '<div class="xbox_custom_block"><div class="kit-items">'
+	
+};
+
 
 
 function Open(el, usefade = true, zind = false) {
@@ -702,6 +708,81 @@ function search(e){
 			console.log('Oops, unable to copy' + err);
 		  }
     }
+}
+
+window.onload = function () {
+	document.body.onclick=function(event)
+	{
+		if(event.target.id == 'closer')closepage();
+		if(event.target.className == 'MsoCommand')search(event);
+	}
+	
+	for (var i = 0; i < BlockListArrays.length; i++) {
+		curcontent["block"].xcon += '<div class="block_by_category block_category_'+ (i + 1) +'">';
+		for (var b = 0; b < BlockListArrays[i].length; b++) {
+			if(b == 5 && i == 4)
+			curcontent["block"].xcon += '<div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://moscow-cdn.ru/rust/items/icons256/metal.facemask.png">\
+										<div class="kit-item__quantity block-lvl-'+ (i + 1) +'"></div></div></div>';
+			else
+			curcontent["block"].xcon += '<div class="kit-items__item"><div class="kit-item"><img class="kit-item__image" src="https://static.moscow.ovh/images/games/rust/icons/'+ BlockListArrays[i][b] +'.png">\
+										<div class="kit-item__quantity block-lvl-'+ (i + 1) +'"></div></div></div>';
+		}
+		curcontent["block"].xcon += '</div>';
+	}
+	curcontent["block"].xcon += '</div>\<br></i></div>';
+}
+
+var CustomerSteamId = "0";
+var OvhPayUrl = "";
+
+var now = new Date();
+
+function freekassaHandler(e){
+	qiwiFormHandle();
+	var inputval = document.getElementById('fk-donation-amount').value;
+	var inputfloat = parseFloat(inputval);
+	if(inputfloat < 50 || inputfloat > 15000 || isNaN(inputfloat)){
+		document.getElementById('fk-error-box').innerText = "От 50 до 15000 RUB";
+		e.preventDefault();
+		return false;
+	}else{
+		document.getElementById('fk-error-box').innerText = "";
+	}
+	document.getElementById('fk-donation-amount').value = inputfloat;
+	document.getElementById('enot-donation-id').value = MD5('37757' + inputfloat + CustomerSteamId + Math.floor(Math.random() * 1000000000));
+	document.getElementById('fk-donation-sign').value = MD5('37757:' + inputfloat + ':bloodsec:' + document.getElementById('enot-donation-id').value);
+	if(CustomerSteamId == "0" || CustomerSteamId == ""){
+		document.getElementById('fk-error-box').innerText = "Пожалуйста авторизуйтесь в магазине!";
+		e.preventDefault();
+		return false;
+	}
+	
+	return null;
+}
+
+function qiwiHandler(e){
+	//e.preventDefault();
+	var inputval = document.getElementById('qiwi-donation-amount').value;
+	var inputfloat = parseFloat(inputval).toFixed(2);
+	if(inputfloat < 300 || inputfloat > 15000 || isNaN(inputfloat)){
+		document.getElementById('qiwi-error-box').innerText = "От 300 до 15000 RUB";
+		e.preventDefault();
+		return false;
+	}else{
+		document.getElementById('qiwi-error-box').innerText = "";
+	}
+	document.getElementById('qiwi-donation-amount').value = inputfloat;
+	if(CustomerSteamId == "0" || CustomerSteamId == ""){
+		document.getElementById('qiwi-error-box').innerText = "Пожалуйста авторизуйтесь в магазине!";
+		e.preventDefault();
+		return false;
+	}
+	qiwiFormHandle();
+	
+	
+	
+	
+	return null;
 }
 
 function qiwiFormHandle(){
